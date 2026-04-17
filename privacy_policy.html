@@ -156,8 +156,8 @@
             <li>相机权限（CAMERA）及相机自动对焦特性（android.hardware.camera.autofocus）：仅在用户主动操作时调用，用于拍摄图片并进行文字识别、本地头像更换、图片颜色提取；自动对焦特性仅在拍摄时启用，提升拍摄清晰度，随相机权限授权生效；</li>
             <li>图片权限（READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于图片选择并进行文字识别、本地头像更换、图片颜色提取、图片拼接长图、图片识别表格、图片转pdf、图片转word、图片合成gif、gif播放器；</li>
             <li>视频权限（READ_MEDIA_VIDEO / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于视频选择并进行视频编码、压缩；</li>
-            <li>音频权限（READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于音频选择并进行计时器的铃声更换；</li>
-            <li>麦克风权限（RECORD_AUDIO）：仅在用户主动操作时调用，用于音频录制并选择进行计时器的铃声更换；</li>
+            <li>音频权限（READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于音频文件选择实现更换倒计时铃声和便签速记插入音频文件；</li>
+            <li>麦克风权限（RECORD_AUDIO）：仅在用户主动操作时调用，用于音频录制并选择实现更换倒计时铃声和便签速记插入音频文件；</li>
             <li>相机/视频拍摄意图（IMAGE_CAPTURE/ACTION_VIDEO_CAPTURE）：应用仅通过系统接口唤起设备自带的相机App，不会直接访问相机硬件，也不会收集拍摄的图片/视频数据，仅用于用户主动拍摄识别的场景；</li>
         </ul>
     </li>
@@ -266,7 +266,7 @@
 
 <div class="footer">
     开发者：李华飞<br>
-    最后更新时间：2026年4月14日
+    最后更新时间：2026年4月17日
 </div>
 
 </body>
