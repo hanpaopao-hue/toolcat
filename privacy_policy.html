@@ -22,10 +22,11 @@
     }
     h1 {
         text-align: center;
-        color: #222;
-        margin: 10px 0 30px;
-        font-size: 22px;
-        font-weight: 600;
+        color: #1f2937;
+        font-size: 26px;
+        font-weight: 700;
+        margin: 10px 0 25px;
+        letter-spacing: 1px;
     }
     h2 {
         color: #333;
@@ -59,11 +60,12 @@
         margin-bottom: 8px;
     }
     .highlight {
-        background-color: #fff8e1;
-        padding: 10px 15px;
-        border-radius: 4px;
-        margin: 20px 0;
-        border: 1px solid #ffe082;
+        background: #fff9e8;
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin: 25px 0;
+        border: 1px solid #ffe8a3;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
     }
     .mlkit-detail {
         background-color: #f8f9fa;
@@ -76,6 +78,9 @@
         width: 100%;
         border-collapse: collapse;
         margin: 20px 0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
     .sdk-table th, .sdk-table td {
         border: 1px solid #ddd;
@@ -108,12 +113,39 @@
         border-left: 3px solid #4299e1;
         font-size: 15px;
     }
+    /* 版本下拉框 美化 */
+    .version-wrap {
+        margin: 0 auto 35px;
+        text-align: center;
+    }
+    .version-select {
+        padding: 10px 18px;
+        width: 320px;
+        font-size: 15px;
+        border: 1px solid #dbeafe;
+        border-radius: 12px;
+        background: #ffffff;
+        color: #333;
+        outline: none;
+        box-shadow: 0 2px 8px rgba(0,136,255,0.08);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .version-select:focus {
+        border-color: #0088ff;
+        box-shadow: 0 3px 12px rgba(0,136,255,0.15);
+    }
 </style>
 </head>
 
 <body>
 <h1>隐私政策</h1>
-
+<div class="version-wrap">
+    <select class="version-select" id="policySel" onchange="jumpPolicy()">
+        <option value="v102" selected>🔹 隐私政策 v1.0.2（当前版本）</option>
+        <option value="v110">🔹 隐私政策 v1.1.0</option>
+    </select>
+</div>
 <div class="highlight">
 <strong>生效日期：2026年4月14日</strong><br>
 欢迎您使用「工具猫」（以下简称“本应用”），本应用由个人开发者独立开发并运营。我们严格遵守《中华人民共和国网络安全法》《中华人民共和国个人信息保护法》等相关法律法规，致力于保护您的个人信息和隐私安全。您使用本应用即表示同意本隐私政策的全部内容，如您不同意，请立即停止使用本应用。
@@ -156,8 +188,8 @@
             <li>相机权限（CAMERA）及相机自动对焦特性（android.hardware.camera.autofocus）：仅在用户主动操作时调用，用于拍摄图片并进行文字识别、本地头像更换、图片颜色提取；自动对焦特性仅在拍摄时启用，提升拍摄清晰度，随相机权限授权生效；</li>
             <li>图片权限（READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于图片选择并进行文字识别、本地头像更换、图片颜色提取、图片拼接长图、图片识别表格、图片转pdf、图片转word、图片合成gif、gif播放器；</li>
             <li>视频权限（READ_MEDIA_VIDEO / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于视频选择并进行视频编码、压缩；</li>
-            <li>音频权限（READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于音频文件选择实现更换倒计时铃声和便签速记插入音频文件；</li>
-            <li>麦克风权限（RECORD_AUDIO）：仅在用户主动操作时调用，用于音频录制并选择实现更换倒计时铃声和便签速记插入音频文件；</li>
+            <li>音频权限（READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于倒计时铃声和便签速记等功能选择音频文件；</li>
+            <li>麦克风权限（RECORD_AUDIO）：仅在用户主动操作时调用，用于音频录制，不会上传到任何第三方服务器；</li>
             <li>相机/视频拍摄意图（IMAGE_CAPTURE/ACTION_VIDEO_CAPTURE）：应用仅通过系统接口唤起设备自带的相机App，不会直接访问相机硬件，也不会收集拍摄的图片/视频数据，仅用于用户主动拍摄识别的场景；</li>
         </ul>
     </li>
@@ -165,7 +197,7 @@
 
 <h3>2.3 Google ML Kit SDK 数据处理详细说明</h3>
 <div class="mlkit-detail">
-<p>本应用集成Google ML Kit（com.google.mlkit:translate 等功能）实现文字识别、语言翻译、语言识别功能，其数据处理严格遵循Google官方隐私政策及Google Play数据安全披露规则，具体说明如下：</p>
+<p>本应用集成Google ML Kit（com.google.mlkit:translate 等功能）实现文字识别、语言翻译功能，其数据处理严格遵循Google官方隐私政策及Google Play数据安全披露规则，具体说明如下：</p>
 <h4>2.3.1 数据收集类型（仅用于诊断和使用情况分析）</h4>
 <ul>
     <li><strong>通用收集数据（所有ML Kit功能）</strong>：
@@ -266,8 +298,26 @@
 
 <div class="footer">
     开发者：李华飞<br>
-    最后更新时间：2026年4月17日
+    最后更新时间：2026年4月28日
 </div>
 
 </body>
+<script>
+
+function jumpPolicy() {
+    const sel = document.getElementById('policySel');
+    const urlMap = {
+        v102: "https://hanpaopao-hue.github.io/toolcat/privacy_policy.html",
+        v110: "https://hanpaopao-hue.github.io/toolcat/privacy_policy_v110.html"
+    };
+    // 跳转
+    if (urlMap[sel.value]) {
+        window.location.href = urlMap[sel.value];
+    }
+    // 永远恢复显示当前版本
+    sel.value = "v110";
+}
+
+</script>
+</script>
 </html>
