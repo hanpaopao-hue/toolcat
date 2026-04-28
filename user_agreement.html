@@ -73,12 +73,39 @@
             margin: 10px 0;
             font-size: 13px;
         }
+        /* 版本下拉框 美化 */
+        .version-wrap {
+            margin: 0 auto 35px;
+            text-align: center;
+        }
+        .version-select {
+            padding: 10px 18px;
+            width: 320px;
+            font-size: 15px;
+            border: 1px solid #dbeafe;
+            border-radius: 12px;
+            background: #ffffff;
+            color: #333;
+            outline: none;
+            box-shadow: 0 2px 8px rgba(0,136,255,0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .version-select:focus {
+            border-color: #0088ff;
+            box-shadow: 0 3px 12px rgba(0,136,255,0.15);
+        }
     </style>
 </head>
 <body>
 <div class="container">
     <h1>用户协议</h1>
-
+    <div class="version-wrap">
+        <select class="version-select" id="agreementSel" onchange="jumpAgreement()">
+            <option value="v102" selected>🔹 用户协议 v1.0.2（当前版本）</option>
+            <option value="v110">🔹 用户协议 v1.1.0</option>
+        </select>
+    </div>
     <div class="age-box">
         <p class="highlight">重要提示：</p>
         <p>本应用集成 Google ML Kit 功能，根据相关服务条款要求：</p>
@@ -160,4 +187,19 @@
     </div>
 </div>
 </body>
+<script>
+function jumpAgreement() {
+    const sel = document.getElementById('agreementSel');
+    const urlMap = {
+        v102: "https://hanpaopao-hue.github.io/toolcat/user_agreement.html",
+        v110: "https://hanpaopao-hue.github.io/toolcat/user_agreement_v110.html"
+    };
+    // 跳转
+    if (urlMap[sel.value]) {
+        window.location.href = urlMap[sel.value];
+    }
+    // 永远恢复显示当前版本
+    sel.value = "v102";
+}
+</script>
 </html>
