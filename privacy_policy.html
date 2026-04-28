@@ -131,7 +131,7 @@
 <ul>
     <li><strong>基础必要权限（安装时默认获取，不可拒绝）</strong>：
         <ul>
-            <li>网络权限（INTERNET）：用于加载广告、下载Google ML Kit语言模型、获取翻译与识别能力；<strong>注：若关闭广告个性化推荐开关，重启应用后将不再加载广告，仅保留ML Kit模型下载的网络请求</strong>；</li>
+            <li>网络权限（INTERNET）：用于加载广告、下载Google ML Kit语言模型；<strong>注：若关闭广告个性化推荐开关，重启应用后将不再加载广告，仅保留ML Kit模型下载的网络请求</strong>；</li>
             <li>网络状态权限（ACCESS_NETWORK_STATE）：用于检测网络状态，优化广告加载与模型下载；</li>
             <li>唤醒锁权限（WAKE_LOCK）：仅在广告加载/ML Kit模型下载时临时保持后台运行，完成后立即释放，不常驻占用系统资源；</li>
             <li>OpenGL ES 2.0特性（glEsVersion=0x00020000）：为广告SDK渲染广告内容的必要系统特性，无隐私数据收集行为；</li>
