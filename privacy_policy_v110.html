@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>工具猫 隐私政策</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+        line-height: 2;
+        color: #333;
+        background-color: #f5f5f5;
+        padding: 20px;
+        max-width: 850px;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+    h1 {
+        text-align: center;
+        color: #1f2937;
+        font-size: 26px;
+        font-weight: 700;
+        margin: 10px 0 25px;
+        letter-spacing: 1px;
+    }
+    h2 {
+        color: #333;
+        margin: 25px 0 15px;
+        font-size: 18px;
+        font-weight: 600;
+        border-left: 3px solid #0088ff;
+        padding-left: 10px;
+    }
+    h3 {
+        color: #444;
+        margin: 20px 0 10px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    h4 {
+        color: #555;
+        margin: 15px 0 8px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+    p {
+        margin-bottom: 15px;
+        text-indent: 2em;
+        text-align: justify;
+    }
+    ul {
+        margin: 10px 0 15px 40px;
+    }
+    li {
+        margin-bottom: 8px;
+    }
+    .highlight {
+        background: #fff9e8;
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin: 25px 0;
+        border: 1px solid #ffe8a3;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .mlkit-detail {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 4px;
+        margin: 10px 0;
+        border: 1px solid #e9ecef;
+    }
+    .sdk-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .sdk-table th, .sdk-table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+    .sdk-table th {
+        background-color: #f0f8ff;
+        font-weight: 600;
+    }
+    .footer {
+        margin-top: 50px;
+        text-align: center;
+        color: #999;
+        font-size: 14px;
+    }
+    a {
+        color: #0088ff;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    /* 新增：广告开关说明样式 */
+    .ad-switch-tip {
+        background-color: #e8f4f8;
+        padding: 12px 15px;
+        border-radius: 4px;
+        margin: 15px 0;
+        border-left: 3px solid #4299e1;
+        font-size: 15px;
+    }
+    /* 版本下拉框 美化 */
+    .version-wrap {
+        margin: 0 auto 35px;
+        text-align: center;
+    }
+    .version-select {
+        padding: 10px 18px;
+        width: 320px;
+        font-size: 15px;
+        border: 1px solid #dbeafe;
+        border-radius: 12px;
+        background: #ffffff;
+        color: #333;
+        outline: none;
+        box-shadow: 0 2px 8px rgba(0,136,255,0.08);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .version-select:focus {
+        border-color: #0088ff;
+        box-shadow: 0 3px 12px rgba(0,136,255,0.15);
+    }
+</style>
+</head>
+
+<body>
+<h1>隐私政策</h1>
+<div class="version-wrap">
+    <select class="version-select" id="policySel" onchange="jumpPolicy()">
+        <option value="v110" selected>🔹 隐私政策 v1.1.0（当前版本）</option>
+        <option value="v102">🔹 隐私政策 v1.0.2</option>
+    </select>
+</div>
+<div class="highlight">
+<strong>生效日期：2026年4月14日</strong><br>
+欢迎您使用「工具猫」（以下简称“本应用”），本应用由个人开发者独立开发并运营。我们严格遵守《中华人民共和国网络安全法》《中华人民共和国个人信息保护法》等相关法律法规，致力于保护您的个人信息和隐私安全。您使用本应用即表示同意本隐私政策的全部内容，如您不同意，请立即停止使用本应用。
+</div>
+
+<h2>一、适用范围</h2>
+<p>本隐私政策适用于您使用本应用提供的所有服务，包括但不限于文字识别、语言翻译、本地数据备份与存储、文件选择、存储位置自定义等功能。本政策仅规范本应用及直接集成的第三方SDK的信息处理行为，第三方SDK的具体信息处理规则以其官方合规说明为准。</p>
+
+<h2>二、我们收集和使用的个人信息及应用权限说明</h2>
+<h3>2.1 必要收集的设备基础信息</h3>
+<p>为保障本应用基础功能正常运行、进行安全校验、防止功能滥用并优化服务体验，我们会收集以下必要信息：设备标识（如Android ID）、设备型号、操作系统版本、网络状态（Wi-Fi/移动网络）、应用崩溃日志等。上述信息仅用于应用功能稳定运行和安全保障，不会用于其他无关用途。</p>
+
+<h3>2.2 应用申请的系统权限及用途</h3>
+<p>本应用为单机工具类应用，所有用户数据均保存在本地设备中。本应用会根据功能需求申请以下系统权限，权限使用规则及场景如下：</p>
+<ul>
+    <li><strong>基础必要权限（安装时默认获取，不可拒绝）</strong>：
+        <ul>
+            <li>网络权限（INTERNET）：用于加载广告、下载Google ML Kit语言模型、下载vosk语音识别模型；<strong>注：若关闭广告个性化推荐开关，重启应用后将不再加载广告，仅保留ML Kit模型、vosk语音识别模型下载的网络请求</strong>；</li>
+            <li>网络状态权限（ACCESS_NETWORK_STATE）：用于检测网络状态，优化广告加载与模型下载；</li>
+            <li>唤醒锁权限（WAKE_LOCK）：仅在广告加载/ML Kit模型下载时临时保持后台运行，完成后立即释放，不常驻占用系统资源；</li>
+            <li>OpenGL ES 2.0特性（glEsVersion=0x00020000）：为广告SDK渲染广告内容的必要系统特性，无隐私数据收集行为；</li>
+        </ul>
+    </li>
+    <li><strong>广告SDK相关权限（需用户主动授权，拒绝不影响应用核心功能）</strong>：
+        <div class="ad-switch-tip">
+        <strong>广告个性化推荐开关说明</strong>：您可在「我的」->「开关设置」->「广告个性化推荐」中操作该开关：<br>
+        ▶ 关闭开关：重启应用后，本应用将<strong>不再初始化口袋工厂广告SDK</strong>，不会加载任何广告，也不会触发广告SDK相关的权限请求；<br>
+        ▶ 开启开关：重启应用后，将正常初始化广告SDK，广告可正常投放，相关权限仅在SDK初始化后按需调用。
+        </div>
+        <ul>
+            <li>电话权限（READ_PHONE_STATE）：仅由口袋工厂广告聚合SDK调用，用于获取设备标识（如Android ID）以保障广告统计准确性，<strong>不会读取电话号码、通话记录、IMEI/MEID等敏感信息</strong>；<strong>关闭广告开关后，该权限不会被调用</strong>；</li>
+            <li>读取应用列表权限（QUERY_ALL_PACKAGES / GET_TASKS）：QUERY_ALL_PACKAGES用于广告推荐、体验广告相关App减免时长等服务，GET_TASKS用于检测应用前台/后台状态以优化广告展示时机，<strong>不会收集应用使用行为、应用内数据等信息</strong>；<strong>关闭广告开关后，该权限不会被调用</strong>；</li>
+            <li>精确位置权限（ACCESS_FINE_LOCATION）：仅用于广告SDK精准推荐广告，可随时在系统设置中关闭，不影响应用核心功能；<strong>关闭广告开关后，该权限不会被调用</strong>；</li>
+            <li>安装应用权限（REQUEST_INSTALL_PACKAGES）：仅用于广告体验中“下载并安装App减免时长”的场景，用户可拒绝授权，拒绝后仅无法参与该广告体验活动，不影响核心功能；<strong>关闭广告开关后，该权限不会被调用</strong>；</li>
+        </ul>
+    </li>
+    <li><strong>功能可选权限（需用户主动操作时调用，拒绝不影响核心功能）</strong>：
+        <ul>
+            <li>存储权限（READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE / MANAGE_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于文件及文件夹的选择和猫币和抽奖情况及签到数据的本地持久化备份、存储与恢复；</li>
+            <li>相机权限（CAMERA）及相机自动对焦特性（android.hardware.camera.autofocus）：仅在用户主动操作时调用，用于拍摄图片并进行文字识别、本地头像更换、图片颜色提取；自动对焦特性仅在拍摄时启用，提升拍摄清晰度，随相机权限授权生效；</li>
+            <li>图片权限（READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于图片选择并进行文字识别、本地头像更换、图片颜色提取、图片拼接长图、图片识别表格、图片转pdf、图片转word、图片合成gif、gif播放器；</li>
+            <li>视频权限（READ_MEDIA_VIDEO / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于视频选择并进行视频编码、压缩；</li>
+            <li>音频权限（READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于倒计时铃声和便签速记等功能选择音频文件；</li>
+            <li>麦克风权限（RECORD_AUDIO）：仅在用户主动操作时调用，用于音频录制、语音识别、语音翻译等对于音频的接收和存储，录制的音频纯本地存储，不会上传到任何第三方服务器；</li>
+            ● 离线语音识别功能：本应用集成Vosk离线语音识别工具，语音采集、语音解析、识别处理全程在设备本地完成，不会上传语音数据至任何服务器；仅在用户主动操作时，可联网下载Vosk官方提供的离线语音识别模型文件，模型下载遵循Vosk官方协议规范。
+            <li>相机/视频拍摄意图（IMAGE_CAPTURE/ACTION_VIDEO_CAPTURE）：应用仅通过系统接口唤起设备自带的相机App，不会直接访问相机硬件，也不会收集拍摄的图片/视频数据，仅用于用户主动拍摄识别的场景；</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>2.3 Google ML Kit SDK 数据处理详细说明</h3>
+<div class="mlkit-detail">
+<p>本应用集成Google ML Kit（com.google.mlkit:translate 等功能）实现文字识别、语言翻译功能，其数据处理严格遵循Google官方隐私政策及Google Play数据安全披露规则，具体说明如下：</p>
+<h4>2.3.1 数据收集类型（仅用于诊断和使用情况分析）</h4>
+<ul>
+    <li><strong>通用收集数据（所有ML Kit功能）</strong>：
+        <ul>
+            <li>设备信息：制造商、型号、操作系统版本、build、可用的机器学习硬件加速器；</li>
+            <li>应用信息：软件包名称、应用版本；</li>
+            <li>标识符：不用于唯一标识用户/设备的每次安装标识符（精简版/捆绑功能）；用户/设备标识符（生成式AI功能，仅用于诊断分析）；</li>
+            <li>效果指标：性能指标（如延迟时间）、API配置（如图片格式/分辨率）、特征输入/输出大小、功能版本；</li>
+            <li>活动数据：事件类型（功能初始化、模型下载、检测、资源释放）、错误代码；</li>
+        </ul>
+    </li>
+    <li><strong>翻译功能专属收集数据</strong>：已配置的源语言和目标语言（仅用于诊断和使用情况分析）；</li>
+</ul>
+<h4>2.3.2 数据加密与共享规则</h4>
+<ul>
+    <li>数据加密：ML Kit对传输中的所有收集数据使用HTTPS加密；</li>
+    <li>数据共享：ML Kit不会将收集的上述数据传输给任何第三方；</li>
+</ul>
+<h4>2.3.3 关联Firebase组件说明</h4>
+<ul>
+    <li>ML Kit使用Firebase远程配置和Firebase安装进行远程配置诊断，相关数据处理遵循Firebase官方隐私政策；</li>
+    <li>Firebase组件仅用于ML Kit功能的调试、维护和优化，不会收集用户个人身份信息。</li>
+</ul>
+<h4>2.3.4 核心数据处理规则</h4>
+<ul>
+    <li>文字识别、翻译的输入数据（图片、文本）及处理结果全部在您的设备本地完成，不会上传至Google服务器或开发者服务器；</li>
+    <li>首次使用ML Kit功能时，会从Google服务器下载对应的语言模型文件（存储于设备本地），后续可能不定期请求bug修复、模型更新、硬件加速器兼容性信息；</li>
+    <li>所有收集的诊断数据均为匿名化处理，不会用于唯一标识用户或设备。</li>
+</ul>
+</div>
+
+<h2>三、第三方SDK信息收集说明</h2>
+<div class="ad-switch-tip">
+<strong>广告SDK初始化规则</strong>：口袋工厂广告SDK仅在「广告个性化推荐开关开启」且应用重启后才会初始化；开关关闭时，SDK不会被初始化，也不会发生任何信息收集行为。
+</div>
+<p>本应用仅集成以下第三方SDK，相关SDK的信息收集行为受其运营方合规规则约束：</p>
+<table class="sdk-table">
+<tr>
+    <th>SDK名称</th>
+    <th>运营方</th>
+    <th>收集信息类型</th>
+    <th>使用目的</th>
+    <th>官方合规说明链接</th>
+</tr>
+<tr>
+    <td>口袋工厂广告聚合SDK</td>
+    <td>珠海口袋工厂有限公司</td>
+    <td>1. 设备标识、设备型号、操作系统版本、网络状态；<br>2. 位置信息（用户授权后）、广告展示与点击数据；<br>3. 设备标识（通过电话权限获取，无敏感通话信息）；<br>4. 已安装应用列表（用于广告推荐、广告时长减免、广告体验服务）；<br>5. 内含穿山甲、广点通等广告渠道，相关数据收集均由口袋工厂统一管控<br><strong>注：仅在广告开关开启且应用重启后，SDK才会收集上述信息；开关关闭时无任何信息收集</strong></td>
+    <td>内部聚合广告渠道，提供广告展示、投放与收益统计<br><strong>注：开关关闭后，SDK不会初始化，无广告相关功能及信息收集</strong></td>
+    <td><a href="https://www.13lm.com/compliance_guide.html" target="_blank">https://www.13lm.com/compliance_guide.html</a></td>
+</tr>
+<tr>
+    <td>Google ML Kit</td>
+    <td>Google LLC</td>
+    <td>1. 设备/应用信息、匿名标识符、效果指标等（仅用于诊断分析，无个人身份信息）；<br>2. 翻译功能的源/目标语言配置；<br>3. 上报匿名的API性能/使用量指标；<br>4. 从Google服务器下载语言模型文件（本地存储）<br><strong>注：不受广告开关控制，仅用于文字识别/翻译功能优化</strong></td>
+    <td>文字识别、语言翻译、语言识别，模型更新与优化</td>
+    <td><a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></td>
+</tr>
+<tr>
+    <td>Vosk 离线语音识别SDK</td>
+    <td>Alpha Cephei Inc.</td>
+    <td>仅用于本地语音识别运算，无用户个人信息收集，仅支持联网下载官方离线语音模型</td>
+    <td>离线语音识别、语音翻译辅助处理</td>
+    <td><a href="https://alphacephei.com/vosk" target="_blank">https://alphacephei.com/vosk</a></td>
+</tr>
+<tr>
+    <td>JNA 工具库</td>
+    <td>JNA 开发团队</td>
+    <td>纯本地工具类组件，无任何用户信息收集、上传行为</td>
+    <td>为Vosk底层调用提供原生接口支持</td>
+    <td><a href="https://github.com/java-native-access/jna" target="_blank">https://github.com/java-native-access/jna</a></td>
+</tr>
+</table>
+
+<h2>四、信息存储与安全保护</h2>
+<h3>4.1 存储规则</h3>
+<p><span class="key-tip">本应用为纯本地工具，所有用户数据（包括猫币信息、签到数据、抽奖情况、配置信息等）仅存储在您的设备本地，未上传至任何服务器。</span></p>
+<ul>
+    <li>常规数据：长期存储于本地，直至您卸载应用或清除应用数据；</li>
+    <li>备份数据：若开启“数据备份”功能，数据会备份至设备「下载文件夹下的.a75bc6d747d4b72f68b71ed9537cce29隐藏文件夹」，卸载应用不会自动删除，需手动清除或关闭备份功能；</li>
+    <li>广告开关状态：本地存储，卸载应用后恢复为默认开启状态；</li>
+    <li>ML Kit模型文件：存储于本地，可在应用内「我的」->「我的语言模型」中手动删除。</li>
+</ul>
+
+<h3>4.2 安全保护措施</h3>
+<p>我们采用本地加密、数据校验等方式保护您的本地数据安全，防止信息丢失、损坏、篡改。</p>
+
+<h2>五、用户的权利及实现方式</h2>
+<p>根据《个人信息保护法》相关规定，您享有以下权利，可通过以下方式实现：</p>
+<ul>
+    <li>查询/咨询个人信息相关问题：发送邮件至邮箱2185273591@qq.com说明您的问题，我们将在15个工作日内回复；</li>
+    <li>更正/删除本地信息：可直接在手机「设置-应用-工具猫-存储」中清除缓存/数据，删除本地存储的所有信息；对于备份数据，需您手动删除设备「下载（download）文件夹下的.a75bc6d747d4b72f68b71ed9537cce29隐藏文件夹」中的对应文件；<strong>清除数据将重置广告开关为默认开启状态</strong>；</li>
+    <li>撤回授权：在手机「设置-应用-工具猫-权限」中关闭对应权限（广告SDK相关权限撤回仅影响广告推荐）；<strong>也可通过关闭广告开关彻底停止广告SDK相关权限的调用</strong>；</li>
+    <li>注销相关数据：卸载本应用并清除所有缓存，同时删除设备中「下载（download）文件夹下的.a75bc6d747d4b72f68b71ed9537cce29隐藏文件夹」内的备份文件，即可完成所有本地数据注销。</li>
+</ul>
+
+<h2>六、未成年人保护</h2>
+<p>本应用面向所有年龄段用户，我们不会主动收集未成年人的个人信息。如未成年人使用本应用，需在监护人陪同下阅读本政策并获得监护人同意；监护人如发现相关问题，可发送邮件至2185273591@qq.com联系我们处理。</p>
+
+<h2>七、数据共享与转让</h2>
+<p>我们不会将您的任何个人信息、使用数据、本地文件共享或转让给任何第三方。仅第三方SDK会根据其官方合规规则收集必要信息（详见本政策第三条），我们不会向SDK运营方额外提供您的个人信息。<strong>关闭广告开关后，口袋工厂广告SDK不会被初始化，因此不会发生任何与该SDK相关的数据共享/转让行为</strong>。</p>
+
+<h2>八、隐私政策的变更</h2>
+<p>如因法律法规调整、功能优化等原因需要变更本政策，我们将在应用启动页面或隐私政策页面更新公示，变更后的政策自公示之日起生效；如您不同意变更后的政策，可停止使用本应用。</p>
+
+<h2>九、联系我们</h2>
+<p>如您对本隐私政策有任何疑问、投诉或建议，可通过以下方式联系我们：</p>
+<ul>
+    <li>联系方式：发送邮件至邮箱2185273591@qq.com；</li>
+    <li>回复时限：我们将在15个工作日内回复您的诉求。</li>
+</ul>
+
+<div class="footer">
+    开发者：李华飞<br>
+    最后更新时间：2026年4月28日
+</div>
+
+</body>
+<script>
+function jumpPolicy() {
+    const sel = document.getElementById('policySel');
+    const urlMap = {
+        v102: "https://hanpaopao-hue.github.io/toolcat/privacy_policy.html",
+        v110: "https://hanpaopao-hue.github.io/toolcat/privacy_policy_v110.html"
+    };
+    // 跳转
+    if (urlMap[sel.value]) {
+        window.location.href = urlMap[sel.value];
+    }
+    // 永远恢复显示当前版本
+    sel.value = "v110";
+}
+</script>
+</script>
+</html>
