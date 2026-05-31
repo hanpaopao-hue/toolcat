@@ -194,6 +194,7 @@
         <ul>
             <li>存储权限（READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE / MANAGE_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于文件及文件夹的选择、局域网快传文件收发、猫币和抽奖情况及签到数据的本地持久化备份、存储与恢复；</li>
             <li>相机权限（CAMERA）及相机自动对焦特性（android.hardware.camera.autofocus）：仅在用户主动操作时调用，用于拍摄图片并进行文字识别、本地头像更换、图片颜色提取；自动对焦特性仅在拍摄时启用，提升拍摄清晰度，随相机权限授权生效；</li>
+            <li>闪光灯权限（FLASHLIGHT）：仅在用户主动使用相机拍摄、图片识别场景下调用，用于开启/关闭设备闪光灯补光，权限仅本地调用，不会收集、上传任何相关数据；</li>
             <li>图片权限（READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于图片选择并进行文字识别、本地头像更换、图片颜色提取、图片拼接长图、图片识别表格、图片转pdf、图片转word、图片合成gif、gif播放器；</li>
             <li>视频权限（READ_MEDIA_VIDEO / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于视频选择并进行视频编码、压缩、局域网快传发送接收；</li>
             <li>音频权限（READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于倒计时铃声和便签速记等功能选择音频文件、局域网快传音频传输；</li>
