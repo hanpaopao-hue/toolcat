@@ -171,7 +171,7 @@
 <ul>
     <li><strong>基础必要权限（安装时默认获取，不可拒绝）</strong>：
         <ul>
-            <li>网络权限（INTERNET）：用于加载广告、下载Google ML Kit语言模型、下载vosk语音识别模型、局域网快传数据交互；<strong>注：若关闭广告个性化推荐开关，重启应用后将不再加载广告，仅保留ML Kit模型、vosk语音识别模型下载与局域网快传的网络请求</strong>；</li>
+            <li>网络权限（INTERNET）：用于加载广告、下载Google ML Kit语言模型、下载vosk语音识别模型、局域网快传数据交互、兑换码效验、版本检查；<strong>注：若关闭广告个性化推荐开关，重启应用后将不再加载广告，仅保留ML Kit模型、vosk语音识别模型下载与局域网快传、兑换码效验、版本检查的网络请求</strong>；</li>
             <li>网络状态权限（ACCESS_NETWORK_STATE）：用于检测网络状态，优化广告加载、模型下载与局域网快传设备匹配；</li>
             <li>WiFi状态权限（ACCESS_WIFI_STATE）、WiFi修改权限（CHANGE_WIFI_STATE）、WiFi组播权限（CHANGE_WIFI_MULTICAST_STATE）、周边WiFi设备权限（NEARBY_WIFI_DEVICES）：仅用于免流量局域网快传功能，实现同一局域网内设备文件搜索、配对与离线文件传输，全程本地局域网交互，不上传数据至外网服务器；</li>
             <li>唤醒锁权限（WAKE_LOCK）：仅在广告加载/ML Kit模型下载、局域网文件传输时临时保持后台运行，完成后立即释放，不常驻占用系统资源；</li>
