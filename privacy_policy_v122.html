@@ -333,9 +333,8 @@
         ▶ <strong>开启开关</strong>：重启应用后，将正常初始化广告SDK，广告可正常投放，相关权限仅在SDK初始化后按需调用。
         </div>
         <ul>
-            <li>电话权限（READ_PHONE_STATE）：仅由口袋工厂广告聚合SDK调用，用于获取设备标识（如Android ID）以保障广告统计准确性，<strong>不会读取电话号码、通话记录、IMEI/MEID等敏感信息</strong>；<strong>关闭广告个性化推荐开关后，该权限不会被调用</strong>；</li>
             <li>读取应用列表权限（QUERY_ALL_PACKAGES / GET_TASKS）：QUERY_ALL_PACKAGES用于文件管理内应用选择功能、广告推荐、体验广告相关App减免时长等服务，GET_TASKS用于检测应用前台/后台状态以优化广告展示时机，<strong>不会收集应用使用行为、应用内数据等信息</strong>；<strong>关闭广告个性化推荐开关后，广告SDK相关调用失效，仅保留本地应用选择查询使用</strong>；</li>
-            <li>位置权限（ACCESS_COARSE_LOCATION / ACCESS_FINE_LOCATION）：Android 12及以下系统设备使用局域网快传功能时必需权限，用于辅助扫描局域网内可连接传输设备，Android 13及以上系统不再依赖该权限；同时可用于广告SDK精准推荐广告，可随时在系统设置中关闭，不影响应用核心功能；<strong>关闭广告个性化推荐开关后，该权限仅服务局域网快传功能，不再用于广告场景</strong>；</li>
+            <li>位置权限（ACCESS_COARSE_LOCATION / ACCESS_FINE_LOCATION）：用于广告SDK精准推荐广告，可随时在系统设置中关闭，不影响应用核心功能；同时Android 12及以下系统设备使用局域网快传功能时的必需权限，用于辅助扫描局域网内可连接传输设备，Android 13及以上系统不再依赖该权限；<strong>关闭广告个性化推荐开关后，该权限仅服务局域网快传功能，不再用于广告场景</strong>；</li>
             <li>安装应用权限（REQUEST_INSTALL_PACKAGES）：仅用于广告体验中"下载并安装App减免时长"的场景，用户可拒绝授权，拒绝后仅无法参与该广告体验活动，不影响核心功能；<strong>关闭广告个性化推荐开关后，该权限不会被调用</strong>；</li>
         </ul>
     </li>
