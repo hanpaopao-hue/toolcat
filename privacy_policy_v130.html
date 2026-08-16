@@ -3,8 +3,99 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="工具猫隐私政策 — 说明本应用如何收集、使用、共享和保护您的个人信息，符合Google Play数据安全披露要求。">
 <title>工具猫 隐私政策</title>
 <style>
+    :root {
+        --bg: #f5f5f5;
+        --text: #333;
+        --heading: #1f2937;
+        --h2-text: #333;
+        --h3-text: #444;
+        --h4-text: #555;
+        --accent: #0088ff;
+        --border: #ddd;
+        --card-bg: #ffffff;
+        --highlight-bg: #fff9e8;
+        --highlight-border: #ffe8a3;
+        --code-bg: #f8f9fa;
+        --code-border: #e9ecef;
+        --table-header-bg: #f0f8ff;
+        --table-row-alt: #fafcff;
+        --ad-tip-bg: #e8f4f8;
+        --ad-tip-border: #4299e1;
+        --summary-bg: #f0f7ff;
+        --summary-border: #c3dbf7;
+        --summary-heading: #1a56db;
+        --toc-bg: #fafafa;
+        --toc-border: #e5e5e5;
+        --toc-link: #555;
+        --sensitive-bg: #fff0f0;
+        --sensitive-border: #e74c3c;
+        --link: #0088ff;
+        --footer-text: #999;
+        --search-bg: #ffffff;
+        --search-border: #dbeafe;
+        --search-focus: #0088ff;
+        --version-link-bg: #f0f8ff;
+        --version-link-active: #0088ff;
+        --version-link-active-bg: #e8f4ff;
+        --back-to-top-bg: #0088ff;
+        --back-to-top-text: #ffffff;
+        --badge-delete-bg: #e8f5e9;
+        --badge-delete-border: #4caf50;
+        --badge-delete-text: #2e7d32;
+        --badge-encrypt-bg: #e3f2fd;
+        --badge-encrypt-border: #2196f3;
+        --badge-encrypt-text: #1565c0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg: #1a1a2e;
+            --text: #e0e0e0;
+            --heading: #f0f0f0;
+            --h2-text: #e0e0e0;
+            --h3-text: #cccccc;
+            --h4-text: #bbbbbb;
+            --accent: #4da6ff;
+            --border: #3a3a5c;
+            --card-bg: #252540;
+            --highlight-bg: #2a2a1e;
+            --highlight-border: #5a5a3a;
+            --code-bg: #1e1e30;
+            --code-border: #3a3a5c;
+            --table-header-bg: #1e2a3a;
+            --table-row-alt: #1a1a2e;
+            --ad-tip-bg: #1a2a35;
+            --ad-tip-border: #4299e1;
+            --summary-bg: #1a2a3e;
+            --summary-border: #2a4a6a;
+            --summary-heading: #6ab0ff;
+            --toc-bg: #1e1e30;
+            --toc-border: #3a3a5c;
+            --toc-link: #aaaaaa;
+            --sensitive-bg: #2a1a1a;
+            --sensitive-border: #e74c3c;
+            --link: #4da6ff;
+            --footer-text: #888888;
+            --search-bg: #252540;
+            --search-border: #3a3a5c;
+            --search-focus: #4da6ff;
+            --version-link-bg: #1e2a3a;
+            --version-link-active: #4da6ff;
+            --version-link-active-bg: #1a2a3e;
+            --back-to-top-bg: #4da6ff;
+            --back-to-top-text: #1a1a2e;
+            --badge-delete-bg: #1b3a1e;
+            --badge-delete-border: #4caf50;
+            --badge-delete-text: #81c784;
+            --badge-encrypt-bg: #1a2a3e;
+            --badge-encrypt-border: #2196f3;
+            --badge-encrypt-text: #64b5f6;
+        }
+    }
+
     * {
         margin: 0;
         padding: 0;
@@ -13,8 +104,8 @@
     body {
         font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
         line-height: 2;
-        color: #333;
-        background-color: #f5f5f5;
+        color: var(--text);
+        background-color: var(--bg);
         padding: 20px;
         max-width: 850px;
         margin: 0 auto;
@@ -22,28 +113,28 @@
     }
     h1 {
         text-align: center;
-        color: #1f2937;
+        color: var(--heading);
         font-size: 26px;
         font-weight: 700;
         margin: 10px 0 25px;
         letter-spacing: 1px;
     }
     h2 {
-        color: #333;
-        margin: 25px 0 15px;
+        color: var(--h2-text);
+        margin: 0;
         font-size: 18px;
         font-weight: 600;
-        border-left: 3px solid #0088ff;
+        border-left: 3px solid var(--accent);
         padding-left: 10px;
     }
     h3 {
-        color: #444;
+        color: var(--h3-text);
         margin: 20px 0 10px;
         font-size: 16px;
         font-weight: 600;
     }
     h4 {
-        color: #555;
+        color: var(--h4-text);
         margin: 15px 0 8px;
         font-size: 15px;
         font-weight: 600;
@@ -56,23 +147,26 @@
     ul {
         margin: 10px 0 15px 40px;
     }
+    ol {
+        margin: 10px 0 15px 40px;
+    }
     li {
         margin-bottom: 8px;
     }
     .highlight {
-        background: #fff9e8;
+        background: var(--highlight-bg);
         padding: 15px 20px;
         border-radius: 10px;
         margin: 25px 0;
-        border: 1px solid #ffe8a3;
+        border: 1px solid var(--highlight-border);
         box-shadow: 0 2px 6px rgba(0,0,0,0.04);
     }
     .mlkit-detail {
-        background-color: #f8f9fa;
+        background-color: var(--code-bg);
         padding: 15px;
         border-radius: 4px;
         margin: 10px 0;
-        border: 1px solid #e9ecef;
+        border: 1px solid var(--code-border);
     }
     .sdk-table {
         width: 100%;
@@ -83,81 +177,63 @@
         box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
     .sdk-table th, .sdk-table td {
-        border: 1px solid #ddd;
+        border: 1px solid var(--border);
         padding: 10px;
         text-align: left;
         font-size: 14px;
     }
     .sdk-table th {
-        background-color: #f0f8ff;
+        background-color: var(--table-header-bg);
         font-weight: 600;
+    }
+    .sdk-table tr:nth-child(even) td {
+        background-color: var(--table-row-alt);
     }
     .footer {
         margin-top: 50px;
         text-align: center;
-        color: #999;
+        color: var(--footer-text);
         font-size: 14px;
     }
     a {
-        color: #0088ff;
+        color: var(--link);
         text-decoration: none;
     }
     a:hover {
         text-decoration: underline;
     }
     .ad-switch-tip {
-        background-color: #e8f4f8;
+        background-color: var(--ad-tip-bg);
         padding: 12px 15px;
         border-radius: 4px;
         margin: 15px 0;
-        border-left: 3px solid #4299e1;
+        border-left: 3px solid var(--ad-tip-border);
         font-size: 15px;
     }
-    .version-wrap {
-        margin: 0 auto 35px;
-        text-align: center;
-    }
-    .version-select {
-        padding: 10px 18px;
-        width: 320px;
-        font-size: 15px;
-        border: 1px solid #dbeafe;
-        border-radius: 12px;
-        background: #ffffff;
-        color: #333;
-        outline: none;
-        box-shadow: 0 2px 8px rgba(0,136,255,0.08);
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-    .version-select:focus {
-        border-color: #0088ff;
-        box-shadow: 0 3px 12px rgba(0,136,255,0.15);
-    }
-    .key-tip{
+    .key-tip {
         font-weight: 600;
     }
     .summary-box {
-        background: #f0f7ff;
-        border: 1px solid #c3dbf7;
+        background: var(--summary-bg);
+        border: 1px solid var(--summary-border);
         border-radius: 10px;
         padding: 18px 22px;
         margin: 20px 0;
     }
     .summary-box h3 {
         margin-top: 0;
-        color: #1a56db;
+        color: var(--summary-heading);
     }
     .toc {
-        background: #fafafa;
-        border: 1px solid #e5e5e5;
+        background: var(--toc-bg);
+        border: 1px solid var(--toc-border);
         border-radius: 10px;
         padding: 18px 22px 18px 40px;
         margin: 20px 0;
     }
     .toc h3 {
         margin-top: 0;
-        color: #333;
+        color: var(--h3-text);
     }
     .toc ul {
         list-style: decimal;
@@ -166,37 +242,230 @@
         margin-bottom: 4px;
     }
     .toc a {
-        color: #555;
+        color: var(--toc-link);
     }
     .sensitive-tip {
-        background-color: #fff0f0;
-        border-left: 3px solid #e74c3c;
+        background-color: var(--sensitive-bg);
+        border-left: 3px solid var(--sensitive-border);
         padding: 12px 15px;
         border-radius: 4px;
         margin: 15px 0;
         font-size: 15px;
+    }
+
+    /* === 版本切换链接（替代 JS select） === */
+    .version-nav {
+        margin: 0 auto 35px;
+        text-align: center;
+    }
+    .version-nav-label {
+        font-size: 14px;
+        color: var(--footer-text);
+        margin-right: 8px;
+    }
+    .version-link {
+        display: inline-block;
+        padding: 6px 14px;
+        margin: 3px;
+        font-size: 14px;
+        border-radius: 20px;
+        background: var(--version-link-bg);
+        color: var(--text);
+        text-decoration: none;
+        border: 1px solid var(--search-border);
+        transition: all 0.2s ease;
+    }
+    .version-link:hover {
+        text-decoration: none;
+        border-color: var(--accent);
+    }
+    .version-link.active {
+        background: var(--version-link-active-bg);
+        color: var(--version-link-active);
+        font-weight: 600;
+        border-color: var(--accent);
+    }
+
+    /* === 搜索栏 === */
+    .search-bar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--bg);
+        padding: 10px 0;
+        margin: 0 -20px 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .search-input {
+        width: 100%;
+        padding: 12px 18px;
+        font-size: 15px;
+        border: 1px solid var(--search-border);
+        border-radius: 25px;
+        background: var(--search-bg);
+        color: var(--text);
+        outline: none;
+        box-shadow: 0 2px 8px rgba(0,136,255,0.08);
+        transition: all 0.3s ease;
+    }
+    .search-input:focus {
+        border-color: var(--search-focus);
+        box-shadow: 0 3px 12px rgba(0,136,255,0.15);
+    }
+    .search-no-result {
+        display: none;
+        text-align: center;
+        padding: 40px;
+        color: var(--footer-text);
+        font-size: 15px;
+    }
+
+    /* === 可折叠分区（details/summary，WebView 原生支持） === */
+    .policy-section {
+        margin: 20px 0;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        overflow: hidden;
+        background: var(--card-bg);
+    }
+    .policy-section > summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        user-select: none;
+        background: var(--card-bg);
+        transition: background 0.2s;
+    }
+    .policy-section > summary::-webkit-details-marker {
+        display: none;
+    }
+    .policy-section > summary:hover {
+        background: var(--toc-bg);
+    }
+    .section-toggle {
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        font-size: 12px;
+        transition: transform 0.2s ease;
+    }
+    .policy-section:not([open]) .section-toggle {
+        transform: rotate(-90deg);
+    }
+    .policy-section-content {
+        padding: 5px 20px 20px;
+    }
+
+    /* === 返回顶部按钮 === */
+    .back-to-top {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--back-to-top-bg);
+        color: var(--back-to-top-text);
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 200;
+        transition: opacity 0.3s;
+    }
+    .back-to-top:hover {
+        opacity: 0.85;
+    }
+
+    /* === Google Play 合规徽章 === */
+    .gp-badge {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: 6px;
+        vertical-align: middle;
+    }
+    .gp-badge-delete {
+        background: var(--badge-delete-bg);
+        border: 1px solid var(--badge-delete-border);
+        color: var(--badge-delete-text);
+    }
+    .gp-badge-encrypt {
+        background: var(--badge-encrypt-bg);
+        border: 1px solid var(--badge-encrypt-border);
+        color: var(--badge-encrypt-text);
+    }
+
+    /* === Google Play 声明对齐提示 === */
+    .gp-alignment {
+        background: var(--ad-tip-bg);
+        border-left: 3px solid var(--ad-tip-border);
+        border-radius: 4px;
+        padding: 14px 18px;
+        margin: 20px 0;
+        font-size: 14px;
+    }
+
+    /* === 无障碍服务 prominent disclosure === */
+    .accessibility-disclosure {
+        background: var(--sensitive-bg);
+        border: 1px solid var(--sensitive-border);
+        border-radius: 8px;
+        padding: 16px 20px;
+        margin: 20px 0;
+    }
+    .accessibility-disclosure h4 {
+        margin-top: 0;
+        color: var(--sensitive-border);
+    }
+
+    /* 响应式表格 */
+    @media (max-width: 600px) {
+        .sdk-table {
+            font-size: 12px;
+        }
+        .sdk-table th, .sdk-table td {
+            padding: 6px;
+        }
     }
 </style>
 </head>
 
 <body>
 <h1>隐私政策</h1>
-<div class="version-wrap">
-    <select class="version-select" id="policySel" onchange="jumpPolicy()">
-        <option value="v130" selected>🔹 隐私政策 v1.3.0（当前版本）</option>
-        <option value="v122">🔹 隐私政策 v1.2.2</option>
-        <option value="v121">🔹 隐私政策 v1.2.1</option>
-        <option value="v120">🔹 隐私政策 v1.2.0</option>
-        <option value="v110">🔹 隐私政策 v1.1.0</option>
-        <option value="v102">🔹 隐私政策 v1.0.2</option>
-    </select>
+
+<div class="version-nav">
+    <span class="version-nav-label">历史版本：</span>
+    <a href="https://hanpaopao-hue.github.io/toolcat/privacy_policy_v130.html" class="version-link active">v1.3.0（当前）</a>
+    <a href="https://hanpaopao-hue.github.io/toolcat/privacy_policy_v122.html" class="version-link">v1.2.2</a>
+    <a href="https://hanpaopao-hue.github.io/toolcat/privacy_policy_v121.html" class="version-link">v1.2.1</a>
+    <a href="https://hanpaopao-hue.github.io/toolcat/privacy_policy_v120.html" class="version-link">v1.2.0</a>
+    <a href="https://hanpaopao-hue.github.io/toolcat/privacy_policy_v110.html" class="version-link">v1.1.0</a>
+    <a href="https://hanpaopao-hue.github.io/toolcat/privacy_policy.html" class="version-link">v1.0.2</a>
 </div>
 
 <div class="highlight">
-<strong>生效日期：2026年8月13日</strong><br>
-<strong>发布日期：2026年8月13日</strong><br><br>
+<strong>生效日期：2026年8月17日</strong><br>
+<strong>发布日期：2026年8月17日</strong><br><br>
 欢迎您使用「工具猫」（以下简称"本应用"），本应用由个人开发者（李华飞，以下简称"我们"）独立开发并运营。我们严格遵守《中华人民共和国个人信息保护法》《中华人民共和国网络安全法》《中华人民共和国数据安全法》《App违法违规收集使用个人信息行为认定方法》《未成年人网络保护条例》等相关法律法规及国家标准，致力于保护您的个人信息和隐私安全。<br><br>
 请您在使用本应用前，仔细阅读并充分理解本隐私政策的全部内容。尤其是以<strong>加粗</strong>或<strong>下划线</strong>形式提示的与您的权益密切相关的条款。您使用本应用即表示同意本隐私政策的全部内容，如您不同意，请立即停止使用本应用。
+</div>
+
+<div class="gp-alignment">
+<strong>Google Play 数据安全声明</strong>：本隐私政策与 Google Play「数据安全」表单（Data Safety Section）披露内容保持一致。您可在 Google Play 商店的应用详情页查看数据安全信息。本应用支持用户数据删除请求，详见<a href="#rights">第八章</a>。用户协议请参阅<a href="https://hanpaopao-hue.github.io/toolcat/user_agreement_v130.html" target="_blank" rel="noopener noreferrer">《用户协议 v1.3.0》</a>。
+<span class="gp-badge gp-badge-delete">支持数据删除</span>
+<span class="gp-badge gp-badge-encrypt">传输加密</span>
 </div>
 
 <div class="summary-box">
@@ -205,10 +474,15 @@
     <li><strong>应用类型</strong>：工具类应用，大部分功能均在用户本地设备运行；</li>
     <li><strong>数据存储</strong>：用户内容数据（猫币、签到、抽奖、配置等）仅存储在本地设备，服务器不存储用户内容数据；仅兑换码核销、邀请码绑定等场景向服务器上传最小必要的脱敏设备标识；</li>
     <li><strong>网络交互</strong>：仅兑换码核销、邀请码绑定、模型下载、广告加载、版本检查等场景联网；</li>
-    <li><strong>第三方SDK</strong>：集成友盟SDK、Google ML Kit、Vosk等，各SDK采集范围详见第四章；</li>
+    <li><strong>第三方SDK</strong>：集成友盟SDK、Google ML Kit、Vosk等，各SDK采集范围详见第五章；</li>
     <li><strong>您的权利</strong>：您可随时查询、更正、删除个人信息，撤回授权，关闭个性化推荐；</li>
+    <li><strong>数据删除</strong>：您可通过应用内操作或发送邮件至 2185273591@qq.com 申请删除数据，详见<a href="#rights">第八章</a>；</li>
     <li><strong>联系方式</strong>：邮箱 2185273591@qq.com（个人信息保护负责人：李华飞）。</li>
 </ul>
+</div>
+
+<div class="search-bar">
+    <input type="text" class="search-input" id="searchInput" placeholder="输入关键词搜索章节内容…" aria-label="搜索隐私政策">
 </div>
 
 <div class="toc">
@@ -230,11 +504,21 @@
 </ul>
 </div>
 
-<h2 id="scope">一、适用范围</h2>
-<p>本隐私政策适用于您使用本应用提供的所有服务，包括但不限于文字识别、语言翻译、本地数据备份与存储、文件选择、存储位置自定义、局域网免流量快传、应用选择管理、自动连点/自动点击/自动滑动、离线语音识别、兑换码兑换、邀请码推广等功能。</p>
-<p>本政策规范以下信息处理行为：（1）本应用自身收集和使用个人信息的行为；（2）本应用直接集成的第三方SDK的信息处理行为。第三方SDK的具体信息处理规则以其官方合规说明为准，您可查阅本政策第五章提供的链接了解详情。</p>
+<div class="search-no-result" id="noResult">未找到匹配内容，请尝试其他关键词。</div>
 
-<h2 id="collection">二、我们如何收集和使用个人信息</h2>
+<!-- ==================== 一、适用范围 ==================== -->
+<details class="policy-section" open id="sec-scope">
+<summary><span class="section-toggle">▼</span><h2 id="scope">一、适用范围</h2></summary>
+<div class="policy-section-content">
+<p>本隐私政策适用于您使用本应用提供的所有服务，包括但不限于文字识别、条码扫描、语言翻译、本地数据备份与存储、文件选择、存储位置自定义、局域网免流量快传、应用选择管理、自动连点/自动点击/自动滑动、离线语音识别、兑换码兑换、邀请码推广等功能。</p>
+<p>本政策规范以下信息处理行为：（1）本应用自身收集和使用个人信息的行为；（2）本应用直接集成的第三方SDK的信息处理行为。第三方SDK的具体信息处理规则以其官方合规说明为准，您可查阅本政策第五章提供的链接了解详情。</p>
+</div>
+</details>
+
+<!-- ==================== 二、信息收集 ==================== -->
+<details class="policy-section" open id="sec-collection">
+<summary><span class="section-toggle">▼</span><h2 id="collection">二、我们如何收集和使用个人信息</h2></summary>
+<div class="policy-section-content">
 <h3>2.1 个人信息收集清单</h3>
 <p>为保障本应用基础功能正常运行、进行安全校验、防止功能滥用并优化服务体验，本应用收集的个人信息如下表所示：</p>
 <table class="sdk-table">
@@ -295,7 +579,7 @@
     <td>否（已脱敏处理）</td>
 </tr>
 <tr>
-    <td>文字识别/语言翻译（Google ML Kit）</td>
+    <td>文字识别/条码扫描/语言翻译（Google ML Kit）</td>
     <td>设备/应用信息、匿名标识符、效果指标、源/目标语言配置</td>
     <td>诊断分析、功能优化（仅匿名化数据）</td>
     <td>SDK自动采集</td>
@@ -326,9 +610,29 @@
     <li><strong>撤回方式</strong>：可在手机「设置-应用-工具猫-权限」中随时关闭位置权限。</li>
 </ul>
 <p>本应用不会收集您的生物识别信息、身份证件号码、银行账户、密码等敏感个人信息。语音录音仅在用户主动操作时本地录制并本地处理，不上传任何服务器，关闭麦克风权限后立即停止采集。</p>
+</div>
+</details>
 
-<h2 id="permissions">三、应用申请的系统权限及用途</h2>
+<!-- ==================== 三、权限 ==================== -->
+<details class="policy-section" open id="sec-permissions">
+<summary><span class="section-toggle">▼</span><h2 id="permissions">三、应用申请的系统权限及用途</h2></summary>
+<div class="policy-section-content">
 <p>本应用为单机工具类应用，所有用户数据均保存在本地设备中。本应用会根据功能需求申请以下系统权限，权限使用规则及场景如下：</p>
+
+<!-- 无障碍服务 prominent disclosure（Google Play 要求） -->
+<div class="accessibility-disclosure">
+<h4>⚠️ 无障碍服务使用声明</h4>
+<p style="text-indent:0;margin-bottom:8px;">本应用使用无障碍服务（AccessibilityService）实现自动连点、自动点击、自动滑动功能。我们郑重声明：</p>
+<ul>
+    <li>无障碍服务<strong>仅接收用户主动触发的模拟点击、滑动指令</strong>；</li>
+    <li><strong>不会</strong>主动捕获、读取屏幕上的任何文字、密码、聊天内容、界面信息；</li>
+    <li><strong>不会</strong>录制屏幕、不监听输入内容；</li>
+    <li><strong>不会</strong>将无障碍服务获取的任何信息上传至服务器或共享给第三方；</li>
+    <li>所有操作<strong>仅由用户手动配置触发</strong>，无后台自动触发行为；</li>
+    <li>拒绝授权将无法使用自动连点功能，<strong>不影响应用其他功能</strong>正常使用。</li>
+</ul>
+</div>
+
 <ul>
     <li><strong>基础必要权限（系统自动授予，无需用户弹窗授权）</strong>：
         <ul>
@@ -349,9 +653,9 @@
     <li><strong>功能可选权限（需用户主动操作时调用，拒绝不影响核心功能）</strong>：
         <ul>
             <li>存储权限（READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE / MANAGE_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于文件及文件夹的选择、局域网快传文件收发、猫币和抽奖情况及签到数据的本地持久化备份、存储与恢复；</li>
-            <li>相机权限（CAMERA）及相机自动对焦特性（android.hardware.camera.autofocus）：仅在用户主动操作时调用，用于拍摄图片并进行文字识别、本地头像更换、图片颜色提取；自动对焦特性仅在拍摄时启用，提升拍摄清晰度，随相机权限授权生效；</li>
+            <li>相机权限（CAMERA）及相机自动对焦特性（android.hardware.camera.autofocus）：仅在用户主动操作时调用，用于拍摄图片并进行文字识别、条码扫描、本地头像更换、图片颜色提取；自动对焦特性仅在拍摄时启用，提升拍摄清晰度，随相机权限授权生效；</li>
             <li>闪光灯权限（FLASHLIGHT）：仅在用户主动使用相机拍摄、图片识别场景下调用，用于开启/关闭设备闪光灯补光，权限仅本地调用，不会收集、上传任何相关数据；</li>
-            <li>图片权限（READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于图片选择并进行文字识别、本地头像更换、图片颜色提取、图片拼接长图、图片识别表格、图片转PDF、图片转Word、图片合成GIF、GIF播放器；</li>
+            <li>图片权限（READ_MEDIA_IMAGES / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于图片选择并进行文字识别、条码扫描、本地头像更换、图片颜色提取、图片拼接长图、图片识别表格、图片转PDF、图片转Word、图片合成GIF、GIF播放器；</li>
             <li>视频权限（READ_MEDIA_VIDEO / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于视频选择并进行视频编码、压缩、局域网快传发送接收；</li>
             <li>音频权限（READ_MEDIA_AUDIO / READ_EXTERNAL_STORAGE）：仅在用户主动操作时调用，用于倒计时铃声和便签速记等功能选择音频文件、局域网快传音频传输；</li>
             <li>麦克风权限（RECORD_AUDIO）：仅在用户主动操作时调用，用于音频录制、语音识别、语音翻译等对于音频的接收和存储，录制的音频纯本地存储，不会上传到任何第三方服务器；
@@ -371,15 +675,20 @@
     </li>
 </ul>
 <p><strong>权限撤回说明</strong>：您可随时在手机「设置-应用-工具猫-权限」中关闭或撤回上述权限。撤回后，对应功能将无法使用，但不影响其他功能正常使用。应用卸载后，上述所有权限授权将自动解除。</p>
+</div>
+</details>
 
-<h2 id="functions">四、核心功能与数据处理详细说明</h2>
+<!-- ==================== 四、核心功能 ==================== -->
+<details class="policy-section" open id="sec-functions">
+<summary><span class="section-toggle">▼</span><h2 id="functions">四、核心功能与数据处理详细说明</h2></summary>
+<div class="policy-section-content">
 
 <h3>4.1 自动连点/自动点击/自动滑动功能</h3>
 <p>本应用包含自动连点、自动点击、自动滑动工具功能，需申请无障碍服务、悬浮窗、前台服务权限，所有功能仅在用户本地设备运行，不收集、不上传任何个人隐私数据。</p>
 
 <h3>4.2 Google ML Kit SDK 数据处理详细说明</h3>
 <div class="mlkit-detail">
-<p>本应用集成Google ML Kit（com.google.mlkit:translate 等功能）实现文字识别、语言翻译功能，其数据处理严格遵循Google官方隐私政策及Google Play数据安全披露规则，具体说明如下：</p>
+<p>本应用集成Google ML Kit（com.google.mlkit:translate、text-recognition、barcode-scanning 等功能）实现文字识别、条码扫描、语言翻译功能，其数据处理严格遵循Google官方隐私政策及Google Play数据安全披露规则，具体说明如下：</p>
 <h4>4.2.1 数据收集类型（仅用于诊断和使用情况分析）</h4>
 <ul>
     <li><strong>通用收集数据（所有ML Kit功能）</strong>：
@@ -405,7 +714,7 @@
 </ul>
 <h4>4.2.4 核心数据处理规则</h4>
 <ul>
-    <li>文字识别、翻译的输入数据（图片、文本）及处理结果全部在您的设备本地完成，不会上传至Google服务器或开发者服务器；</li>
+    <li>文字识别、条码扫描、翻译的输入数据（图片、文本）及处理结果全部在您的设备本地完成，不会上传至Google服务器或开发者服务器；</li>
     <li>首次使用ML Kit功能时，会从Google服务器下载对应的语言模型文件（存储于设备本地），后续可能不定期请求bug修复、模型更新、硬件加速器兼容性信息；</li>
     <li>所有收集的诊断数据均为匿名化处理，不会用于唯一标识用户或设备。</li>
 </ul>
@@ -453,8 +762,13 @@
     <li><strong>权限使用</strong>：需使用WiFi相关权限（CHANGE_WIFI_STATE、CHANGE_WIFI_MULTICAST_STATE、NEARBY_WIFI_DEVICES），Android 12及以下系统还需位置权限用于辅助扫描局域网内可连接设备，Android 13及以上系统使用NEARBY_WIFI_DEVICES权限无需位置权限；</li>
     <li><strong>数据留存</strong>：传输完成后不在任何服务器留存文件，仅本地缓存传输记录（可在应用内清除）。</li>
 </ul>
+</div>
+</details>
 
-<h2 id="thirdsdk">五、第三方SDK信息共享清单</h2>
+<!-- ==================== 五、第三方SDK ==================== -->
+<details class="policy-section" open id="sec-thirdsdk">
+<summary><span class="section-toggle">▼</span><h2 id="thirdsdk">五、第三方SDK信息共享清单</h2></summary>
+<div class="policy-section-content">
 <div class="ad-switch-tip">
 <strong>广告SDK初始化规则</strong>：当用户同意隐私政策后，广告SDK将开始初始化，这时将进行相关信息的采集，采集信息见下表。如您未同意隐私政策，SDK不会初始化，也不会采集任何信息。
 </div>
@@ -476,7 +790,7 @@
     <td>第三方广告投放</td>
     <td>SDK本机采集后传输至SDK运营方服务器</td>
     <td>HTTPS加密传输</td>
-    <td><a href="https://www.umeng.com/page/policy" target="_blank">查看链接</a></td>
+    <td><a href="https://www.umeng.com/page/policy" target="_blank" rel="noopener noreferrer">查看链接</a></td>
 </tr>
 <tr>
     <td>友盟移动统计SDK</td>
@@ -485,7 +799,7 @@
     <td>进行APP数据统计分析</td>
     <td>SDK本机采集后传输至SDK运营方服务器</td>
     <td>HTTPS加密传输</td>
-    <td><a href="https://www.umeng.com/page/policy" target="_blank">查看链接</a></td>
+    <td><a href="https://www.umeng.com/page/policy" target="_blank" rel="noopener noreferrer">查看链接</a></td>
 </tr>
 <tr>
     <td>友盟合规助手SDK</td>
@@ -494,16 +808,16 @@
     <td>进行APP数据存证</td>
     <td>SDK本机采集后传输至SDK运营方服务器</td>
     <td>HTTPS加密传输</td>
-    <td><a href="https://www.umeng.com/page/policy" target="_blank">查看链接</a></td>
+    <td><a href="https://www.umeng.com/page/policy" target="_blank" rel="noopener noreferrer">查看链接</a></td>
 </tr>
 <tr>
     <td>Google ML Kit</td>
     <td>Google LLC</td>
-    <td>1. 设备/应用信息、匿名标识符、效果指标等（仅用于诊断分析，无个人身份信息）；<br>2. 翻译功能的源/目标语言配置；<br>3. 上报匿名的API性能/使用量指标；<br>4. 从Google服务器下载语言模型文件（本地存储）<br><strong>注：仅用于文字识别/翻译功能优化</strong></td>
-    <td>文字识别、语言翻译、语言识别，模型更新与优化</td>
+    <td>1. 设备/应用信息、匿名标识符、效果指标等（仅用于诊断分析，无个人身份信息）；<br>2. 翻译功能的源/目标语言配置；<br>3. 上报匿名的API性能/使用量指标；<br>4. 从Google服务器下载语言模型文件（本地存储）<br><strong>注：仅用于文字识别/条码扫描/翻译功能优化</strong></td>
+    <td>文字识别、条码扫描、语言翻译、语言识别，模型更新与优化</td>
     <td>SDK本机采集后传输至Google服务器</td>
     <td>HTTPS加密传输</td>
-    <td><a href="https://policies.google.com/privacy" target="_blank">查看链接</a></td>
+    <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">查看链接</a></td>
 </tr>
 <tr>
     <td>Vosk 离线语音识别SDK</td>
@@ -512,7 +826,7 @@
     <td>离线语音识别、语音翻译辅助处理</td>
     <td>纯本地处理，不传输用户数据</td>
     <td>—</td>
-    <td><a href="https://alphacephei.com/vosk" target="_blank">查看链接</a></td>
+    <td><a href="https://alphacephei.com/vosk" target="_blank" rel="noopener noreferrer">查看链接</a></td>
 </tr>
 <tr>
     <td>JNA 工具库</td>
@@ -521,13 +835,18 @@
     <td>为Vosk底层调用提供原生接口支持</td>
     <td>纯本地组件</td>
     <td>—</td>
-    <td><a href="https://github.com/java-native-access/jna" target="_blank">查看链接</a></td>
+    <td><a href="https://github.com/java-native-access/jna" target="_blank" rel="noopener noreferrer">查看链接</a></td>
 </tr>
 </table>
 <p><strong>SDK数据共享原则</strong>：我们仅向上述SDK共享为实现对应功能所必需的信息，不额外提供您的其他个人信息。各SDK运营方对其收集的信息独立承担责任，我们不会将您的个人信息出售或提供给上述SDK以外的任何第三方。</p>
 <p><strong>特别说明</strong>：上表所列MAC地址采集行为受Android系统版本限制，Android 6及以上系统已对MAC地址进行随机化处理，实际可获取的MAC地址为系统随机生成的临时地址，不可用于唯一标识设备。Google ML Kit所使用的Firebase组件（Firebase远程配置、Firebase安装）仅用于ML Kit功能的调试与优化，其数据处理遵循Google官方隐私政策，详见4.2.3节说明。</p>
+</div>
+</details>
 
-<h2 id="storage">六、信息的存储与安全保护</h2>
+<!-- ==================== 六、存储与安全 ==================== -->
+<details class="policy-section" open id="sec-storage">
+<summary><span class="section-toggle">▼</span><h2 id="storage">六、信息的存储与安全保护</h2></summary>
+<div class="policy-section-content">
 <h3>6.1 存储规则</h3>
 <p><span class="key-tip">本应用为纯本地工具，所有用户数据（包括猫币信息、签到数据、抽奖情况、配置信息、局域网传输文件记录等）仅存储在您的设备本地，未上传至任何服务器。</span></p>
 <ul>
@@ -552,7 +871,78 @@
 </ul>
 <p>尽管我们采取了上述合理可行的措施，但请您理解，在互联网行业由于技术的局限和各种手段的不断变化，不可能始终保证信息百分之百安全。如不幸发生个人信息安全事件，我们将按照法律法规要求及时向您告知安全事件的基本情况、影响、已采取或将要采取的处置措施、您可自主防范和降低风险的建议等，并以推送通知、公告等方式进行告知。</p>
 
-<h2 id="personalization">七、个性化推荐与自动化决策</h2>
+<!-- 新增：数据留存期限表（Google Play 数据安全表单要求） -->
+<h3>6.3 数据留存期限一览表</h3>
+<p>为符合 Google Play 数据安全披露要求，以下表格汇总各类数据的留存期限与删除方式：</p>
+<table class="sdk-table">
+<tr>
+    <th>数据类型</th>
+    <th>留存期限</th>
+    <th>存储位置</th>
+    <th>删除方式</th>
+</tr>
+<tr>
+    <td>本地用户数据（猫币、签到、抽奖、配置等）</td>
+    <td>至卸载应用或清除应用数据</td>
+    <td>本地设备</td>
+    <td>清除应用数据 / 卸载应用</td>
+</tr>
+<tr>
+    <td>备份数据（猫币、抽奖、签到）</td>
+    <td>至关闭备份开关</td>
+    <td>本地公共目录（加密）</td>
+    <td>「我的」→「开关设置」→「数据备份」关闭</td>
+</tr>
+<tr>
+    <td>ML Kit 模型文件</td>
+    <td>至手动删除</td>
+    <td>本地设备</td>
+    <td>「我的」→「我的语言模型」手动删除</td>
+</tr>
+<tr>
+    <td>兑换码绑定关系（脱敏Android ID + IP + 兑换码）</td>
+    <td>兑换码过期/次数用尽后立即删除</td>
+    <td>服务器（中国大陆境内）</td>
+    <td>自动清理 / 邮件申请提前删除</td>
+</tr>
+<tr>
+    <td>兑换码防刷列表</td>
+    <td>每6小时自动清理</td>
+    <td>服务器（中国大陆境内）</td>
+    <td>自动定时清理</td>
+</tr>
+<tr>
+    <td>邀请码绑定关系（脱敏Android ID + 邀请码）</td>
+    <td>最后使用后3个月自动清除</td>
+    <td>服务器（中国大陆境内）</td>
+    <td>自动清理 / 邮件申请提前删除</td>
+</tr>
+<tr>
+    <td>友盟SDK采集数据</td>
+    <td>按友盟官方合规规则处理</td>
+    <td>友盟服务器</td>
+    <td>联系友盟 / 关闭广告个性化推荐</td>
+</tr>
+<tr>
+    <td>Google ML Kit 诊断数据</td>
+    <td>按Google官方隐私政策处理</td>
+    <td>Google服务器（境外，匿名化）</td>
+    <td>按 Google 隐私政策行使权利</td>
+</tr>
+<tr>
+    <td>局域网快传文件</td>
+    <td>传输完成后不在服务器留存</td>
+    <td>本地局域网（点对点）</td>
+    <td>传输完成后自动消失</td>
+</tr>
+</table>
+</div>
+</details>
+
+<!-- ==================== 七、个性化推荐 ==================== -->
+<details class="policy-section" open id="sec-personalization">
+<summary><span class="section-toggle">▼</span><h2 id="personalization">七、个性化推荐与自动化决策</h2></summary>
+<div class="policy-section-content">
 <p>本应用集成友盟广告SDK，可能基于您的设备信息和行为数据进行广告个性化推荐。关于个性化推荐，我们承诺：</p>
 <div class="ad-switch-tip">
 <strong>广告个性化推荐开关说明</strong>：您可在「我的」->「开关设置」->「广告个性化推荐」中操作该开关：<br>
@@ -566,8 +956,13 @@
     <li><strong>数据不用于其他用途</strong>：广告推荐相关数据不会用于用户画像、行为追踪等非广告业务。</li>
 </ul>
 <p>本应用不会进行其他类型的自动化决策。</p>
+</div>
+</details>
 
-<h2 id="rights">八、您的权利</h2>
+<!-- ==================== 八、用户权利 ==================== -->
+<details class="policy-section" open id="sec-rights">
+<summary><span class="section-toggle">▼</span><h2 id="rights">八、您的权利</h2></summary>
+<div class="policy-section-content">
 <p>根据《中华人民共和国个人信息保护法》及相关法律法规规定，您对自己的个人信息享有以下权利：</p>
 <ul>
     <li><strong>知情权与决定权</strong>：您有权了解本应用收集和使用您个人信息的情况，并有权限制或拒绝我们收集和使用您的个人信息。如您不同意本隐私政策，可停止使用本应用；</li>
@@ -596,7 +991,37 @@
 </ul>
 <p>您行使上述权利时，请发送邮件至 2185273591@qq.com 说明您的诉求，我们将在<strong>15个工作日</strong>内回复并处理。为保障安全，我们可能需要您提供必要的身份验证信息。</p>
 
-<h2 id="minor">九、未成年人保护</h2>
+<!-- 新增：数据删除请求专节（Google Play 要求） -->
+<h3>8.1 数据删除请求（Google Play 数据安全要求）</h3>
+<div class="ad-switch-tip">
+<strong>数据删除请求机制</strong>：根据 Google Play 数据安全政策要求，本应用提供以下数据删除途径：
+</div>
+<ul>
+    <li><strong>应用内删除</strong>：
+        <ul>
+            <li><strong>本地全部数据</strong>：手机「设置」→「应用」→「工具猫」→「存储」→「清除数据」，可一键删除所有本地存储的个人信息；</li>
+            <li><strong>备份数据</strong>：App 内「我的」→「开关设置」→「数据备份」关闭开关，备份数据彻底清除；</li>
+            <li><strong>ML Kit 模型文件</strong>：App 内「我的」→「我的语言模型」手动删除；</li>
+            <li><strong>广告个性化数据</strong>：App 内「我的」→「开关设置」→「广告个性化推荐」关闭开关，停止 OAID 采集。</li>
+        </ul>
+    </li>
+    <li><strong>网页/邮件删除</strong>：
+        <ul>
+            <li>发送邮件至 <strong>2185273591@qq.com</strong>，注明「数据删除请求」及您的脱敏设备标识（可在应用内查看）；</li>
+            <li>我们将在收到请求后 <strong>15 个工作日</strong>内完成服务器端数据（兑换码/邀请码绑定关系）的删除；</li>
+            <li>卸载应用后仍可通过邮件方式提出数据删除请求，无需重新安装应用。</li>
+        </ul>
+    </li>
+    <li><strong>删除范围</strong>：服务器端将删除与您相关的所有脱敏 Android ID、IP 与兑换码/邀请码的绑定关系；本地数据在清除应用数据或卸载后即被删除。</li>
+    <li><strong>例外情况</strong>：出于安全防护、反欺诈、法律法规要求等正当理由，部分风控日志可能需要依法保留一定期限，但不会用于其他用途。</li>
+</ul>
+</div>
+</details>
+
+<!-- ==================== 九、未成年人保护 ==================== -->
+<details class="policy-section" open id="sec-minor">
+<summary><span class="section-toggle">▼</span><h2 id="minor">九、未成年人保护</h2></summary>
+<div class="policy-section-content">
 <p>我们高度重视未成年人个人信息保护，本应用面向所有年龄段用户，但我们不会主动收集未成年人的个人信息。</p>
 <ul>
     <li><strong>监护人同意</strong>：如未成年人（特别是<strong>不满14周岁的儿童</strong>）使用本应用，需在监护人陪同下阅读本政策并获得监护人同意后方可使用。监护人有权拒绝未成年人使用本应用；</li>
@@ -606,12 +1031,29 @@
     <li><strong>联系方式</strong>：监护人如发现未成年人权益受到侵害或有任何疑问，可发送邮件至 2185273591@qq.com 联系我们处理，我们将在收到反馈后及时处理并回复。</li>
 </ul>
 
-<h2 id="share">十、信息的共享、转让与公开</h2>
+<!-- 新增：COPPA 与 Google Play Family 合规说明 -->
+<h3>9.1 儿童隐私保护（COPPA 与 Google Play Family 政策）</h3>
+<div class="ad-switch-tip">
+<p style="text-indent:0;margin-bottom:8px;"><strong>合规声明</strong>：本应用遵守以下儿童隐私保护法规：</p>
+<ul style="margin-top:0;">
+    <li><strong>美国 COPPA</strong>（Children's Online Privacy Protection Act）：本应用不面向13岁以下儿童定向推广，不会 knowingly 收集13岁以下儿童的个人信息。如发现此类情况，请联系我们立即删除；</li>
+    <li><strong>《未成年人网络保护条例》</strong>（中国）：不满14周岁未成年人使用本应用需监护人陪同并获得监护人同意；</li>
+    <li><strong>Google Play Family Policy</strong>：本应用未在 Google Play Family 目录上架，不属于专为儿童设计的应用。但我们仍按最小必要原则处理数据，确保未成年人信息安全。</li>
+</ul>
+</div>
+<p>如监护人发现我们不小心收集了未成年人的个人信息，请发送邮件至 2185273591@qq.com，我们将在收到通知后<strong>立即删除</strong>相关信息。</p>
+</div>
+</details>
+
+<!-- ==================== 十、信息共享 ==================== -->
+<details class="policy-section" open id="sec-share">
+<summary><span class="section-toggle">▼</span><h2 id="share">十、信息的共享、转让与公开</h2></summary>
+<div class="policy-section-content">
 <h3>10.1 信息共享</h3>
 <p>我们不会将您的任何个人信息、使用数据、本地文件共享或转让给任何第三方。但为实现本应用功能，我们在以下情形中向第三方SDK共享必要信息（详见第五章第三方SDK信息共享清单）：</p>
 <ul>
     <li>为实现广告投放与统计功能，向友盟SDK共享设备信息、位置信息等；</li>
-    <li>为实现文字识别与翻译功能，向Google ML Kit共享匿名化的诊断数据；</li>
+    <li>为实现文字识别、条码扫描与翻译功能，向Google ML Kit共享匿名化的诊断数据；</li>
     <li>局域网快传文件仅在用户自主选择的设备间传输，不会向外泄露。</li>
 </ul>
 <p>我们不会向SDK运营方额外提供您的个人信息，也不会将您的个人信息出售给任何第三方。</p>
@@ -628,17 +1070,27 @@
 
 <h3>10.3 合并、收购与破产</h3>
 <p>如本应用发生合并、收购或破产清算，涉及个人信息转让的，我们将要求接收方继续受本隐私政策约束；如接收方变更用途，将要求其重新取得您的同意。</p>
+</div>
+</details>
 
-<h2 id="crossborder">十一、数据出境说明</h2>
+<!-- ==================== 十一、数据出境 ==================== -->
+<details class="policy-section" open id="sec-crossborder">
+<summary><span class="section-toggle">▼</span><h2 id="crossborder">十一、数据出境说明</h2></summary>
+<div class="policy-section-content">
 <p>本应用的数据出境情况说明如下：</p>
 <ul>
     <li><strong>本地数据</strong>：本应用用户数据（猫币、签到、抽奖、配置、本地文件等）仅存储在本地设备，不存在数据出境问题；</li>
     <li><strong>兑换码/邀请码数据</strong>：脱敏Android ID、IP与兑换码/邀请码的绑定关系存入中国大陆境内业务数据库，全部数据境内处理，不跨境传输；</li>
     <li><strong>友盟SDK</strong>：数据存储及处理遵循友盟官方合规规则，详见友盟隐私政策；</li>
-    <li><strong>Google ML Kit</strong>：ML Kit收集的诊断数据可能传输至Google服务器（位于境外），该数据为匿名化处理后的诊断和使用情况分析数据，不包含个人身份信息，根据《个人信息保护法》不属于个人信息，不涉及个人信息跨境传输。文字识别和翻译的输入数据（图片、文本）及处理结果全部在您的设备本地完成，不上传至Google服务器。具体数据处理规则遵循Google官方隐私政策。如您不同意上述诊断数据传输至境外服务器，可在关闭网络权限后使用离线功能（但首次下载模型需联网）。</li>
+    <li><strong>Google ML Kit</strong>：ML Kit收集的诊断数据可能传输至Google服务器（位于境外），该数据为匿名化处理后的诊断和使用情况分析数据，不包含个人身份信息，根据《个人信息保护法》不属于个人信息，不涉及个人信息跨境传输。文字识别、条码扫描和翻译的输入数据（图片、文本）及处理结果全部在您的设备本地完成，不上传至Google服务器。具体数据处理规则遵循Google官方隐私政策。如您不同意上述诊断数据传输至境外服务器，可在关闭网络权限后使用离线功能（但首次下载模型需联网）。</li>
 </ul>
+</div>
+</details>
 
-<h2 id="update">十二、隐私政策的更新</h2>
+<!-- ==================== 十二、政策更新 ==================== -->
+<details class="policy-section" open id="sec-update">
+<summary><span class="section-toggle">▼</span><h2 id="update">十二、隐私政策的更新</h2></summary>
+<div class="policy-section-content">
 <p>如因法律法规调整、功能优化、第三方SDK变更等原因需要变更本政策，我们将按以下方式处理：</p>
 <ul>
     <li><strong>更新通知</strong>：我们将在应用启动页面、隐私政策页面或通过应用内通知等方式更新公示，并注明更新日期和生效日期；</li>
@@ -646,14 +1098,20 @@
     <li><strong>生效时间</strong>：变更后的政策自公示之日起生效，法律法规另有规定的从其规定；</li>
     <li><strong>不同意变更</strong>：如您不同意变更后的政策，可停止使用本应用。继续使用本应用即视为您同意更新后的隐私政策。</li>
 </ul>
-<p>本政策历史版本可通过本页面顶部版本下拉框查看。</p>
+<p>本政策历史版本可通过本页面顶部版本链接查看。</p>
+</div>
+</details>
 
-<h2 id="contact">十三、联系我们与投诉渠道</h2>
+<!-- ==================== 十三、联系我们 ==================== -->
+<details class="policy-section" open id="sec-contact">
+<summary><span class="section-toggle">▼</span><h2 id="contact">十三、联系我们与投诉渠道</h2></summary>
+<div class="policy-section-content">
 <h3>13.1 联系方式</h3>
 <p>如您对本隐私政策有任何疑问、投诉或建议，或需要行使个人信息权利，可通过以下方式联系我们：</p>
 <ul>
     <li><strong>个人信息保护负责人</strong>：李华飞</li>
     <li><strong>联系邮箱</strong>：2185273591@qq.com</li>
+    <li><strong>数据删除请求邮箱</strong>：2185273591@qq.com（邮件主题请注明「数据删除请求」）</li>
     <li><strong>回复时限</strong>：我们将在15个工作日内回复您的诉求。</li>
 </ul>
 
@@ -698,32 +1156,87 @@
 </tr>
 <tr>
     <td>生效日期</td>
-    <td>2026年8月13日</td>
+    <td>2026年8月17日</td>
+</tr>
+<tr>
+    <td>Google Play 数据安全</td>
+    <td>已填写并提交 Data Safety 表单</td>
 </tr>
 </table>
+</div>
+</details>
 
 <div class="footer">
     开发者：李华飞<br>
     个人信息保护负责人：李华飞<br>
-    最后更新时间：2026年8月13日
+    最后更新时间：2026年8月17日<br>
+    本隐私政策符合 Google Play 数据安全披露要求
 </div>
+
+<button class="back-to-top" id="backToTop" aria-label="返回顶部" title="返回顶部">↑</button>
 
 </body>
 <script>
-function jumpPolicy() {
-    const sel = document.getElementById('policySel');
-    const urlMap = {
-        v102: "https://hanpaopao-hue.github.io/toolcat/privacy_policy.html",
-        v110: "https://hanpaopao-hue.github.io/toolcat/privacy_policy_v110.html",
-        v120: "https://hanpaopao-hue.github.io/toolcat/privacy_policy_v120.html",
-        v121: "https://hanpaopao-hue.github.io/toolcat/privacy_policy_v121.html",
-        v122: "https://hanpaopao-hue.github.io/toolcat/privacy_policy_v122.html",
-        v130: "https://hanpaopao-hue.github.io/toolcat/privacy_policy_v130.html"
-    };
-    if (urlMap[sel.value]) {
-        window.location.href = urlMap[sel.value];
-    }
-    sel.value = "v130";
-}
+// === 搜索功能（JS 可选，WebView 未开启 JS 时优雅降级） ===
+(function() {
+    var searchInput = document.getElementById('searchInput');
+    var sections = document.querySelectorAll('.policy-section');
+    var noResult = document.getElementById('noResult');
+    if (!searchInput) return;
+
+    searchInput.addEventListener('input', function() {
+        var query = this.value.toLowerCase().trim();
+        var visibleCount = 0;
+
+        sections.forEach(function(section) {
+            if (query === '') {
+                section.style.display = '';
+                section.setAttribute('open', '');
+                visibleCount++;
+            } else {
+                var text = section.textContent.toLowerCase();
+                if (text.indexOf(query) !== -1) {
+                    section.style.display = '';
+                    section.setAttribute('open', '');
+                    visibleCount++;
+                } else {
+                    section.style.display = 'none';
+                }
+            }
+        });
+
+        noResult.style.display = visibleCount === 0 ? 'block' : 'none';
+    });
+})();
+
+// === 返回顶部按钮 ===
+(function() {
+    var btn = document.getElementById('backToTop');
+    if (!btn) return;
+
+    window.addEventListener('scroll', function() {
+        btn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
+    });
+
+    btn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+})();
+
+// === TOC 链接点击时自动展开目标分区 ===
+(function() {
+    document.querySelectorAll('.toc a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            var targetId = this.getAttribute('href').substring(1);
+            var targetHeading = document.getElementById(targetId);
+            if (targetHeading) {
+                var targetSection = targetHeading.closest('details');
+                if (targetSection) {
+                    targetSection.setAttribute('open', '');
+                }
+            }
+        });
+    });
+})();
 </script>
 </html>
