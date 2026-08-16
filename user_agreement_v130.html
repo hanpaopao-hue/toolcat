@@ -1,266 +1,655 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>工具猫 用户协议</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background-color: #f5f5f5;
-            padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        h1 {
-            font-size: 20px;
-            text-align: center;
-            margin-bottom: 25px;
-            color: #222;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-        h2 {
-            font-size: 16px;
-            margin: 20px 0 10px;
-            color: #1976d2;
-        }
-        p, li {
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-        ul {
-            padding-left: 20px;
-            margin-bottom: 10px;
-        }
-        .highlight {
-            color: #e53935;
-            font-weight: bold;
-        }
-        .age-box {
-            background-color: #fff1f0;
-            border: 1px solid #ff4444;
-            border-radius: 6px;
-            padding: 14px;
-            margin-bottom: 20px;
-        }
-        .footer {
-            margin-top: 30px;
-            font-size: 12px;
-            color: #666;
-            text-align: center;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
-        }
-        .ad-switch-note {
-            background-color: #f0f8ff;
-            border-left: 3px solid #1976d2;
-            padding: 10px 12px;
-            margin: 10px 0;
-            font-size: 13px;
-        }
-        .code-tip {
-            background-color: #f0fff4;
-            border-left: 3px solid #2ea44f;
-            padding: 10px 12px;
-            margin: 10px 0;
-            font-size: 13px;
-        }
-        .invite-tip {
-            background-color: #fff8e6;
-            border-left: 3px solid #faad14;
-            padding: 10px 12px;
-            margin: 10px 0;
-            font-size: 13px;
-        }
-        .version-wrap {
-            margin: 0 auto 35px;
-            text-align: center;
-        }
-        .version-select {
-            padding: 10px 18px;
-            width: 320px;
-            font-size: 15px;
-            border: 1px solid #dbeafe;
-            border-radius: 12px;
-            background: #ffffff;
-            color: #333;
-            outline: none;
-            box-shadow: 0 2px 8px rgba(0,136,255,0.08);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .version-select:focus {
-            border-color: #0088ff;
-            box-shadow: 0 3px 12px rgba(0,136,255,0.15);
-        }
-    </style>
-</head>
-<body>
-<div class="version-wrap">
-    <select class="version-select" id="agreementSel" onchange="jumpAgreement()">
-        <option value="v130" selected>🔹 用户协议 v1.3.0（当前版本）</option>
-        <option value="v122">🔹 用户协议 v1.2.2</option>
-        <option value="v102">🔹 用户协议 v1.0.2</option>
-        <option value="v110">🔹 用户协议 v1.1.0</option>
-        <option value="v120">🔹 用户协议 v1.2.0</option>
-        <option value="v121">🔹 用户协议 v1.2.1</option>
-    </select>
-</div>
-<div class="container">
-    <h1>用户协议</h1>
-    <div class="age-box">
-        <p class="highlight">重要提示：</p>
-        <p>本应用集成 Google ML Kit 功能、Vosk 离线语音识别功能、自动连点辅助功能、局域网快传功能、兑换码福利兑换功能、邀请码推广奖励功能，根据相关服务条款要求：</p>
-        <p>• 年满18周岁的用户可独立使用本应用；</p>
-        <p>• 未满18周岁的未成年人，<strong>必须在监护人陪同、指导下使用</strong>。</p>
-        <p>您使用本应用即视为您已满足上述要求。</p>
-    </div>
-
-    <p>欢迎使用「工具猫」（以下简称"本App"）。本App由<strong>个人开发者【李华飞】</strong>独立开发，为<strong>单机工具类应用</strong>。您在安装、使用本App前，请仔细阅读本协议。您开始使用本App，即视为您已阅读、理解并同意本协议全部内容。</p>
-
-    <h2>一、服务说明</h2>
-    <p>1. 本App为<strong>单机本地运行</strong>工具应用，绝大多数文件处理、功能计算均在您的设备本地完成，不向服务器上传任何用户本地文件、图片、隐私数据。</p>
-    <p>2. 本App包含基于 Google ML Kit 实现的本地识别、分析等功能，该功能<strong>仅在设备本地运行</strong>，不上传图片、文本至第三方服务器。</p>
-    <p>3. 本App内置<strong>自动连点、自动点击、自动滑动</strong>辅助工具，需用户主动授权无障碍服务、悬浮窗权限、前台服务权限后方可使用，所有自动操作仅在设备本地执行。</p>
-    <p>4. 本App内置<strong>免流量局域网快传</strong>功能，依托本地WiFi局域网实现设备间点对点离线文件传输，数据仅在局域网内交互，不会上传外网服务器。</p>
-    <p>5. 本App内置文件管理应用选择功能，可本地读取设备已安装应用列表，仅用于本地功能操作，不对外传输应用相关数据。</p>
-    <p>6. 本App采用<strong>观看广告解锁功能</strong>的模式，用户通过观看广告获得对应功能的使用权限，广告由第三方广告SDK（友盟SDK，运营方：友盟同欣（北京）科技有限公司）提供；您可通过App内「广告个性化推荐」开关控制广告SDK对OAID的采集与广告个性化推荐行为。</p>
-    <p>7. 本App内置<strong>兑换码福利兑换</strong>功能，可输入官方发放的兑换码兑换猫币、抽奖次数等应用内福利；该功能需要联网与服务器交互完成校验，相关数据处理规则详见隐私政策。</p>
-    <div class="code-tip">
-        <strong>兑换码服务数据说明</strong>：兑换功能仅上传您主动输入的兑换码，在您同意本应用隐私政策前提下，读取系统设备标识符Android ID（Settings.Secure.ANDROID_ID），并在客户端完成不可逆加盐SHA256哈希脱敏后再上传，同时服务器接口自动获取客户端访问IP；将脱敏后的Android ID、客户端IP与当前兑换码三者绑定存入数据库用于实时风控防刷。本应用不会读取、上传IMEI、OAID、设备序列号等其他硬件标识；仅存储风控校验所需绑定关系，不生成长期留存的完整核销流水日志。
-    </div>
-    <p>8. 本App内置<strong>邀请码推广奖励</strong>功能，用户可生成个人邀请码分享给其他用户，新用户填写邀请码后，邀请人与被邀请人均可获得猫币等应用内虚拟奖励；该功能需要联网与服务器交互完成邀请关系绑定与奖励发放，相关数据处理规则详见隐私政策。</p>
-    <div class="invite-tip">
-        <strong>邀请码服务数据说明</strong>：邀请码绑定过程中，在您同意本应用隐私政策前提下，读取系统设备标识符Android ID（Settings.Secure.ANDROID_ID），客户端完成不可逆加盐SHA256哈希脱敏后上传。使用脱敏Android ID、邀请码建立邀请关系，用于奖励发放与反作弊风控。本应用不会读取、上传IMEI、OAID、设备序列号等其他硬件标识；邀请关系仅用于推广奖励业务，不会用于其他用途。
-    </div>
-    <p>9. 本App集成 <strong>Vosk 离线语音识别引擎</strong>，语音采集、语音解析、识别处理全程在设备本地完成，不会上传语音数据至任何服务器；仅在用户主动操作时，可联网下载Vosk官方提供的离线语音识别模型文件，模型下载遵循Vosk官方协议规范。</p>
-
-    <h2>二、使用年龄与陪同规则</h2>
-    <p>1. 因集成 Google ML Kit、Vosk 离线语音识别、自动点击辅助、局域网快传、兑换码福利、邀请码推广奖励功能，本App对使用年龄作出如下要求：</p>
-    <p>（1）<strong>年满18周岁</strong>的用户，可独立使用本App全部功能；</p>
-    <p>（2）<strong>未满18周岁</strong>的未成年人，<strong>必须在监护人陪同、指导下方可使用</strong>，监护人应对未成年人的使用行为全程负责。</p>
-    <p>2. 本App为单机应用，<strong>不具备实名认证、年龄验证能力</strong>，用户需自觉遵守本条约定。</p>
-    <p>3. 如未成年人未在监护人陪同下使用本App，由此产生的一切责任由监护人承担，与开发者无关。</p>
-
-    <h2>三、用户权利与义务</h2>
-    <ul>
-        <li>1. 遵守法律法规及本协议约定，合法、合规、合理使用本App各项功能。</li>
-        <li>2. 不通过破解、篡改、作弊、外挂等方式绕过广告或功能限制。</li>
-        <li>3. 严禁利用本App自动连点、自动点击功能用于恶意刷量、违规操作、游戏作弊、侵权及各类违法违规场景。</li>
-        <li>4. 不利用局域网快传传输违法违规、侵权、不良信息文件，违规传输后果由用户自行承担。</li>
-        <li>5. 不利用本App从事侵权、违法、违规行为，违规使用产生的一切后果由用户自行承担。</li>
-        <li>6. 自行备份重要文件，因使用本App文件处理、文件传输功能造成的文件损失由用户自行承担。</li>
-        <li>7. 未成年人使用本App的，应确保已获得监护人同意并在其陪同下使用。</li>
-        <li>8. 可通过App内「我的」->「开关设置」->「广告个性化推荐」开关控制广告SDK对OAID的采集与广告个性化推荐行为，开关操作需重启应用后方可生效。<strong>关闭开关后广告仍会展示（非个性化推荐），您仍可通过观看广告解锁对应功能。</strong></li>
-        <li>9. Vosk语音识别模型、无障碍相关服务、局域网传输服务均遵循对应官方协议，请自觉遵守，违规使用后果自行承担。</li>
-        <li>10. 无障碍服务、悬浮窗、前台服务、WiFi相关权限仅用于对应功能实现，用户可随时在系统设置关闭权限或停止服务。</li>
-        <li>11. 应用列表查询权限仅服务本地文件管理选择功能，禁止用于窃取、批量收集设备应用信息等违规用途。</li>
-        <li>12. 兑换码仅可本人免费使用，禁止批量采集、倒卖、共享、脚本批量刷取兑换码福利；服务器将通过IP临时风控拦截恶意刷码行为，违规者开发者有权限制其兑换功能使用权限。</li>
-        <li>13. 兑换码存在有效期、使用次数限制，过期或次数用尽后自动失效，不予补发，用户需自行留意兑换码使用时效。</li>
-        <li>14. 邀请码仅限正常个人推广分享，禁止脚本批量注册、刷邀请、倒卖邀请码、有偿售卖邀请链接、恶意薅取推广奖励；服务器会进行反作弊风控，对刷邀请、虚假邀请行为，开发者有权撤销全部违规所得虚拟奖励、封禁邀请码功能。</li>
-        <li>15. 用户不得通过虚假宣传、误导话术诱导他人填写邀请码；因用户个人推广话术引发的纠纷，由该用户自行承担全部责任。</li>
-        <li>16. 邀请推广奖励为应用内虚拟猫币，不可兑换现金，不支持折现、转账、提现；奖励规则、奖励额度开发者可根据运营情况进行调整。</li>
-    </ul>
-
-    <h2>四、广告规则</h2>
-    <div class="ad-switch-note">
-        <strong>广告个性化推荐开关说明</strong>：您可在本App「我的」->「开关设置」->「广告个性化推荐」中操作该开关，开关功能如下：<br>
-        ▶ <strong>关闭开关并重启应用</strong>：本App将<strong>关闭广告SDK对OAID的采集</strong>，不会再采集OAID信息，广告将不再基于您的偏好进行个性化推荐（广告仍会展示，您仍可通过观看广告解锁功能）；<br>
-        ▶ <strong>开启开关并重启应用</strong>：将恢复广告SDK对OAID的采集，广告将基于您的设备信息进行个性化推荐。
-    </div>
-    <p>1. 本App通过广告收入维持开发与运营，用户可通过观看广告解锁对应功能；<strong>广告个性化推荐开关的关闭不影响广告展示与广告解锁功能</strong>，仅影响广告是否基于您的偏好进行个性化推荐。</p>
-    <p>2. 广告内容、加载、展示均由第三方广告SDK（友盟SDK，运营方：友盟同欣（北京）科技有限公司）提供与控制，开发者不对广告内容的真实性、合法性负责。</p>
-    <p>3. 因网络、平台、设备等原因导致广告无法加载或播放失败，属于正常现象，开发者不承担补偿或赔偿责任。</p>
-    <p>4. 所有任务广告观看一次获得一次奖励，奖励规则在广告SDK正常加载时生效。</p>
-    <p>5. 广告SDK在用户同意隐私政策后开始初始化并采集相关信息（详见隐私政策第三方SDK清单），如您未同意隐私政策，广告SDK不会初始化，也不会采集任何信息。</p>
-
-    <h2>五、辅助功能权限使用说明</h2>
-    <p>1. 为实现自动连点、自动点击、自动滑动功能，本App需要用户主动授权：<strong>无障碍服务权限、悬浮窗(SYSTEM_ALERT_WINDOW)权限、前台服务(FOREGROUND_SERVICE)权限</strong>。</p>
-    <p>2. 无障碍服务仅用于模拟屏幕点击、滑动等自动化操作，<strong>不会读取屏幕内容、不会抓取文字、不会获取用户隐私、账号密码等敏感信息</strong>。</p>
-    <p>3. 悬浮窗权限仅用于展示连点控制悬浮球、操作预览界面，方便启停连点服务；前台服务仅用于维持后台连点服务稳定运行，无任何信息收集行为。</p>
-    <p>4. WiFi相关权限、周边设备权限、部分系统版本下位置权限，仅用于局域网快传设备搜索、配对与离线文件传输，仅本地局域网使用。</p>
-    <p>5. 应用列表查询权限仅用于本地文件管理内应用选择操作，不会上传应用相关数据。</p>
-    <p>6. 麦克风权限仅在用户主动操作时调用，用于音频录制、语音识别、语音翻译等，录制的音频纯本地存储，不会上传到任何第三方服务器。</p>
-    <p>7. 上述权限均为用户手动开启，用户可随时关闭服务、撤销权限，关闭后对应功能立即失效。</p>
-    <p>8. 请文明合规使用自动点击、局域网快传、语音识别辅助功能，禁止用于违规、非法用途，违规使用一切责任由用户自行承担。</p>
-
-    <h2>六、隐私政策说明</h2>
-    <p>1. 本App绝大多数本地功能<strong>不收集、不上传、不存储</strong>任何个人身份信息、文件内容、图片内容或使用记录。</p>
-    <p>2. 兑换码功能仅联网提交用户输入的兑换码，在您同意本应用隐私政策前提下，读取系统设备标识符Android ID（Settings.Secure.ANDROID_ID），并在客户端完成不可逆加盐SHA256哈希脱敏后再上传，同时服务器接口自动获取客户端访问IP；将脱敏后的Android ID、客户端IP与当前兑换码三者绑定存入数据库用于实时风控防刷。本应用不会读取、上传IMEI、OAID、设备序列号等其他硬件标识；仅存储风控校验所需绑定关系，不生成长期留存的完整核销流水日志。</p>
-    <p>3. 第三方广告SDK（友盟SDK）与 Google ML Kit 可能会根据其自身规则获取设备标识等信息，用于广告展示与功能实现；关闭「广告个性化推荐」开关后，广告SDK将不再采集OAID信息，具体以第三方政策为准。</p>
-    <p>4. 本App不会主动收集、存储或传输用户隐私数据；自动连点、局域网快传相关服务全程本地运行，无数据上传外网。</p>
-    <p>5. Vosk 离线语音识别引擎、JNA 工具库为纯本地运行组件，无任何信息收集、上传行为。</p>
-    <p>6. 本地应用列表读取仅用于自身功能操作，不会对外共享、上传设备应用信息。</p>
-    <p>7. 本App集成的第三方SDK完整清单（包括SDK名称、运营方、共享信息类型、使用目的等）详见隐私政策第五章「第三方SDK信息共享清单」。</p>
-    <p>完整个人信息处理规则详见<a href="https://hanpaopao-hue.github.io/toolcat/privacy_policy_v130.html" target="_blank">《隐私政策 v1.3.0》</a></p>
-
-    <h2>七、知识产权</h2>
-    <p>1. 本App的代码、界面、设计、逻辑等知识产权归个人开发者所有。软件开源声明于「开源软件许可声明」进行说明。</p>
-    <p>2. 本App使用的第三方开源库、Google ML Kit、Vosk 离线语音识别引擎、JNA 工具库、友盟广告SDK、无障碍相关能力、局域网传输组件、兑换码服务接口均遵守其对应的开源协议与服务条款。</p>
-    <p>3. 用户仅享有本APP的使用权，不得对代码进行以下操作：<br>
-        (1) 反编译、逆向工程、拆解APP以提取核心代码；<br>
-        (2) 将代码片段/完整代码上传至GitHub、Gitee等开源平台；<br>
-        (3) 向第三方出售、转让、分享代码；<br>
-        (4) 基于本代码开发同类产品或商用功能。</p>
-    <p>4. App内官方发放的兑换码、邀请码、福利机制相关权益知识产权归开发者所有，禁止私自生成、伪造、倒卖兑换码与邀请码。</p>
-
-    <h2>八、免责声明</h2>
-    <p class="highlight">本App按"现状"提供，开发者不承诺服务不间断、无错误。</p>
-    <ul>
-        <li>1. 因设备故障、系统兼容、文件损坏、误操作、局域网传输异常等导致的数据损失，开发者不承担责任。</li>
-        <li>2. 因用户违反协议、违规使用自动点击、文件传输功能、第三方广告、网络问题等产生的任何损失，开发者不承担责任。</li>
-        <li>3. 用户违规使用连点功能进行游戏作弊、恶意操作、违规刷量等行为，一切风险与责任由用户自行承担。</li>
-        <li>4. 用户违规传输违规违法文件、滥用应用查询权限、批量刷取兑换码福利造成的相关纠纷，责任由用户自行承担。</li>
-        <li>5. 未成年人未在监护人陪同下使用本App所引发的全部责任，由监护人承担。</li>
-        <li>6. 个人开发者保留随时停止维护、更新或下架应用的权利，无需承担责任。</li>
-        <li>7. 兑换码存在有效期与使用次数限制，因用户逾期未兑换、自行泄露兑换码造成福利损失，开发者不予补偿。</li>
-        <li>8. 邀请推广奖励为应用内虚拟奖励，不支持现金折现；因网络异常、反作弊风控判定导致奖励未发放或奖励撤销，开发者无现金补偿义务。</li>
-    </ul>
-
-    <h2>九、协议修改</h2>
-    <p>开发者可在必要时更新本协议，更新后的协议在App内公布后立即生效。您继续使用本App即视为同意修改后的协议。</p>
-    <p>本次v1.3.0版本主要更新内容：同步更新广告SDK相关描述（由"口袋工厂"更改为"友盟SDK"）、更改广告个性化推荐开关行为说明（关闭开关仅停止OAID采集与个性化推荐，不影响广告展示与解锁功能）、新增Vosk离线语音识别功能服务说明、同步引用隐私政策v1.3.0。</p>
-
-    <h2>十、联系与反馈</h2>
-    <p>开发者姓名：李华飞（个人信息保护负责人）</p>
-    <p>开发者邮箱：2185273591@qq.com</p>
-    <p>本App为个人独立开发，非公司运营。</p>
-
-    <div class="footer">
-        本协议生效日期：2026年8月11日<br>
-        工具猫 | 李华飞 版权所有
-    </div>
-</div>
-<script>
-function jumpAgreement() {
-    const sel = document.getElementById('agreementSel');
-    const urlMap = {
-        v102: "https://hanpaopao-hue.github.io/toolcat/user_agreement.html",
-        v110: "https://hanpaopao-hue.github.io/toolcat/user_agreement_v110.html",
-        v120: "https://hanpaopao-hue.github.io/toolcat/user_agreement_v120.html",
-        v121: "https://hanpaopao-hue.github.io/toolcat/user_agreement_v121.html",
-        v122: "https://hanpaopao-hue.github.io/toolcat/user_agreement_v122.html",
-        v130: "https://hanpaopao-hue.github.io/toolcat/user_agreement_v130.html"
-    };
-    if (urlMap[sel.value]) {
-        window.location.href = urlMap[sel.value];
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="工具猫用户协议 — 说明应用服务内容、使用年龄要求、用户权利义务、广告规则、权限使用、知识产权与免责条款。">
+<title>工具猫 用户协议</title>
+<style>
+    :root {
+        --bg: #f5f5f5;
+        --text: #333;
+        --heading: #1f2937;
+        --accent: #0088ff;
+        --border: #ddd;
+        --card-bg: #ffffff;
+        --highlight-bg: #fff9e8;
+        --highlight-border: #ffe8a3;
+        --age-bg: #fff1f0;
+        --age-border: #e74c3c;
+        --age-text: #c62828;
+        --ad-tip-bg: #e8f4f8;
+        --ad-tip-border: #4299e1;
+        --code-bg: #f0fff4;
+        --code-border: #2ea44f;
+        --invite-bg: #fff8e6;
+        --invite-border: #faad14;
+        --summary-bg: #f0f7ff;
+        --summary-border: #c3dbf7;
+        --summary-heading: #1a56db;
+        --toc-bg: #fafafa;
+        --toc-border: #e5e5e5;
+        --toc-link: #555;
+        --link: #0088ff;
+        --footer-text: #999;
+        --search-bg: #ffffff;
+        --search-border: #dbeafe;
+        --search-focus: #0088ff;
+        --version-link-bg: #f0f8ff;
+        --version-link-active: #0088ff;
+        --version-link-active-bg: #e8f4ff;
+        --back-to-top-bg: #0088ff;
+        --back-to-top-text: #ffffff;
+        --section-hover: #fafafa;
     }
-    sel.value = "v130";
-}
-</script>
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --bg: #1a1a2e;
+            --text: #e0e0e0;
+            --heading: #f0f0f0;
+            --accent: #4da6ff;
+            --border: #3a3a5c;
+            --card-bg: #252540;
+            --highlight-bg: #2a2a1e;
+            --highlight-border: #5a5a3a;
+            --age-bg: #2a1a1a;
+            --age-border: #e74c3c;
+            --age-text: #ff8a80;
+            --ad-tip-bg: #1a2a35;
+            --ad-tip-border: #4299e1;
+            --code-bg: #1b3a26;
+            --code-border: #4caf50;
+            --invite-bg: #2a2415;
+            --invite-border: #faad14;
+            --summary-bg: #1a2a3e;
+            --summary-border: #2a4a6a;
+            --summary-heading: #6ab0ff;
+            --toc-bg: #1e1e30;
+            --toc-border: #3a3a5c;
+            --toc-link: #aaaaaa;
+            --link: #4da6ff;
+            --footer-text: #888888;
+            --search-bg: #252540;
+            --search-border: #3a3a5c;
+            --search-focus: #4da6ff;
+            --version-link-bg: #1e2a3a;
+            --version-link-active: #4da6ff;
+            --version-link-active-bg: #1a2a3e;
+            --back-to-top-bg: #4da6ff;
+            --back-to-top-text: #1a1a2e;
+            --section-hover: #20203a;
+        }
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: "Microsoft YaHei", Helvetica, Arial, sans-serif;
+        line-height: 2;
+        color: var(--text);
+        background-color: var(--bg);
+        padding: 20px;
+        max-width: 850px;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+    h1 {
+        text-align: center;
+        color: var(--heading);
+        font-size: 26px;
+        font-weight: 700;
+        margin: 10px 0 25px;
+        letter-spacing: 1px;
+    }
+    h2 {
+        color: var(--heading);
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-left: 3px solid var(--accent);
+        padding-left: 10px;
+    }
+    p {
+        margin-bottom: 15px;
+        text-align: justify;
+    }
+    ul, ol {
+        margin: 10px 0 15px 40px;
+    }
+    li {
+        margin-bottom: 8px;
+        text-align: justify;
+    }
+    .highlight {
+        background: var(--highlight-bg);
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin: 25px 0;
+        border: 1px solid var(--highlight-border);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .age-box {
+        background: var(--age-bg);
+        border: 1px solid var(--age-border);
+        border-radius: 8px;
+        padding: 14px 18px;
+        margin: 20px 0;
+    }
+    .age-box .highlight-title {
+        color: var(--age-text);
+        font-weight: bold;
+    }
+    .ad-switch-note {
+        background-color: var(--ad-tip-bg);
+        border-left: 3px solid var(--ad-tip-border);
+        padding: 12px 15px;
+        border-radius: 4px;
+        margin: 15px 0;
+        font-size: 15px;
+    }
+    .code-tip {
+        background-color: var(--code-bg);
+        border-left: 3px solid var(--code-border);
+        padding: 12px 15px;
+        border-radius: 4px;
+        margin: 15px 0;
+        font-size: 15px;
+    }
+    .invite-tip {
+        background-color: var(--invite-bg);
+        border-left: 3px solid var(--invite-border);
+        padding: 12px 15px;
+        border-radius: 4px;
+        margin: 15px 0;
+        font-size: 15px;
+    }
+    .summary-box {
+        background: var(--summary-bg);
+        border: 1px solid var(--summary-border);
+        border-radius: 10px;
+        padding: 18px 22px;
+        margin: 20px 0;
+    }
+    .summary-box h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: var(--summary-heading);
+        font-size: 16px;
+    }
+    .footer {
+        margin-top: 50px;
+        text-align: center;
+        color: var(--footer-text);
+        font-size: 14px;
+    }
+    a {
+        color: var(--link);
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* === 版本切换链接（与隐私政策一致，无 JS 依赖） === */
+    .version-nav {
+        margin: 0 auto 35px;
+        text-align: center;
+    }
+    .version-nav-label {
+        font-size: 14px;
+        color: var(--footer-text);
+        margin-right: 8px;
+    }
+    .version-link {
+        display: inline-block;
+        padding: 6px 14px;
+        margin: 3px;
+        font-size: 14px;
+        border-radius: 20px;
+        background: var(--version-link-bg);
+        color: var(--text);
+        text-decoration: none;
+        border: 1px solid var(--search-border);
+        transition: all 0.2s ease;
+    }
+    .version-link:hover {
+        text-decoration: none;
+        border-color: var(--accent);
+    }
+    .version-link.active {
+        background: var(--version-link-active-bg);
+        color: var(--version-link-active);
+        font-weight: 600;
+        border-color: var(--accent);
+    }
+
+    /* === 搜索栏 === */
+    .search-bar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--bg);
+        padding: 10px 0;
+        margin: 0 -20px 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .search-input {
+        width: 100%;
+        padding: 12px 18px;
+        font-size: 15px;
+        border: 1px solid var(--search-border);
+        border-radius: 25px;
+        background: var(--search-bg);
+        color: var(--text);
+        outline: none;
+        box-shadow: 0 2px 8px rgba(0,136,255,0.08);
+        transition: all 0.3s ease;
+    }
+    .search-input:focus {
+        border-color: var(--search-focus);
+        box-shadow: 0 3px 12px rgba(0,136,255,0.15);
+    }
+    .search-no-result {
+        display: none;
+        text-align: center;
+        padding: 40px;
+        color: var(--footer-text);
+        font-size: 15px;
+    }
+
+    /* === 目录 === */
+    .toc {
+        background: var(--toc-bg);
+        border: 1px solid var(--toc-border);
+        border-radius: 10px;
+        padding: 18px 22px 18px 40px;
+        margin: 20px 0;
+    }
+    .toc h3 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 16px;
+        color: var(--heading);
+    }
+    .toc ul {
+        list-style: decimal;
+        margin: 0;
+    }
+    .toc li {
+        margin-bottom: 4px;
+    }
+    .toc a {
+        color: var(--toc-link);
+    }
+
+    /* === 可折叠分区（details/summary，WebView 原生支持） === */
+    .policy-section {
+        margin: 20px 0;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        overflow: hidden;
+        background: var(--card-bg);
+    }
+    .policy-section > summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        user-select: none;
+        background: var(--card-bg);
+        transition: background 0.2s;
+    }
+    .policy-section > summary::-webkit-details-marker {
+        display: none;
+    }
+    .policy-section > summary:hover {
+        background: var(--section-hover);
+    }
+    .section-toggle {
+        flex-shrink: 0;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        font-size: 12px;
+        transition: transform 0.2s ease;
+    }
+    .policy-section:not([open]) .section-toggle {
+        transform: rotate(-90deg);
+    }
+    .policy-section-content {
+        padding: 5px 20px 20px;
+    }
+
+    /* === 返回顶部按钮 === */
+    .back-to-top {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--back-to-top-bg);
+        color: var(--back-to-top-text);
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        z-index: 200;
+        transition: opacity 0.3s;
+    }
+    .back-to-top:hover {
+        opacity: 0.85;
+    }
+</style>
+</head>
+
+<body>
+<h1>用户协议</h1>
+
+<div class="version-nav">
+    <span class="version-nav-label">历史版本：</span>
+    <a href="https://hanpaopao-hue.github.io/toolcat/user_agreement_v130.html" class="version-link active">v1.3.0（当前）</a>
+    <a href="https://hanpaopao-hue.github.io/toolcat/user_agreement_v122.html" class="version-link">v1.2.2</a>
+    <a href="https://hanpaopao-hue.github.io/toolcat/user_agreement_v121.html" class="version-link">v1.2.1</a>
+    <a href="https://hanpaopao-hue.github.io/toolcat/user_agreement_v120.html" class="version-link">v1.2.0</a>
+    <a href="https://hanpaopao-hue.github.io/toolcat/user_agreement_v110.html" class="version-link">v1.1.0</a>
+    <a href="https://hanpaopao-hue.github.io/toolcat/user_agreement.html" class="version-link">v1.0.2</a>
+</div>
+
+<div class="highlight">
+<strong>生效日期：2026年8月13日</strong><br>
+<strong>发布日期：2026年8月17日</strong><br><br>
+欢迎使用「工具猫」（以下简称"本App"）。本App由<strong>个人开发者【李华飞】</strong>独立开发，为<strong>单机工具类应用</strong>。您在安装、使用本App前，请仔细阅读本协议，尤其是以<strong>加粗</strong>形式提示的与您的权益密切相关的条款。您开始使用本App，即视为您已阅读、理解并同意本协议全部内容。如您不同意本协议，请立即停止使用本App。
+</div>
+
+<div class="age-box">
+    <p class="highlight-title">重要提示：</p>
+    <p>本应用集成 Google ML Kit 功能、Vosk 离线语音识别功能、自动连点辅助功能、局域网快传功能、兑换码福利兑换功能、邀请码推广奖励功能，根据相关服务条款要求：</p>
+    <p>• 年满18周岁的用户可独立使用本应用；</p>
+    <p>• 未满18周岁的未成年人，<strong>必须在监护人陪同、指导下使用</strong>；其中<strong>不满14周岁的儿童</strong>，须事先获得监护人同意后方可使用。</p>
+    <p>您使用本应用即视为您已满足上述要求。</p>
+</div>
+
+<div class="summary-box">
+<h3>📋 协议要点摘要</h3>
+<ul>
+    <li><strong>应用类型</strong>：单机本地运行工具应用，绝大多数文件处理、功能计算均在您的设备本地完成；</li>
+    <li><strong>联网场景</strong>：仅兑换码核销、邀请码绑定、模型下载、广告加载、版本检查等场景联网；</li>
+    <li><strong>商业模式</strong>：观看广告解锁功能，可通过「广告个性化推荐」开关控制OAID采集，关闭不影响广告展示与功能解锁；</li>
+    <li><strong>权限原则</strong>：无障碍、悬浮窗、前台服务、位置、麦克风等权限均需用户主动授权，可随时关闭或撤回；</li>
+    <li><strong>虚拟奖励</strong>：猫币、抽奖次数、邀请奖励均为应用内虚拟权益，不可兑换现金、不支持提现；</li>
+    <li><strong>配套文档</strong>：个人信息处理规则详见<a href="https://hanpaopao-hue.github.io/toolcat/privacy_policy_v130.html" target="_blank" rel="noopener noreferrer">《隐私政策 v1.3.0》</a>，开源组件许可详见<a href="https://hanpaopao-hue.github.io/toolcat/copyright_authorization.html" target="_blank" rel="noopener noreferrer">《开源软件许可声明》</a>；</li>
+    <li><strong>联系方式</strong>：李华飞（个人信息保护负责人），邮箱 2185273591@qq.com。</li>
+</ul>
+</div>
+
+<div class="search-bar">
+    <input type="text" class="search-input" id="searchInput" placeholder="输入关键词搜索章节内容…" aria-label="搜索用户协议">
+</div>
+
+<div class="toc">
+<h3>目录</h3>
+<ul>
+    <li><a href="#service">一、服务说明</a></li>
+    <li><a href="#age">二、使用年龄与陪同规则</a></li>
+    <li><a href="#rights">三、用户权利与义务</a></li>
+    <li><a href="#ad">四、广告规则</a></li>
+    <li><a href="#permission">五、辅助功能权限使用说明</a></li>
+    <li><a href="#privacy">六、隐私政策说明</a></li>
+    <li><a href="#ip">七、知识产权</a></li>
+    <li><a href="#disclaimer">八、免责声明</a></li>
+    <li><a href="#update">九、协议修改</a></li>
+    <li><a href="#contact">十、联系与反馈</a></li>
+</ul>
+</div>
+
+<div class="search-no-result" id="noResult">未找到匹配内容，请尝试其他关键词。</div>
+
+<!-- ==================== 一、服务说明 ==================== -->
+<details class="policy-section" open id="sec-service">
+<summary><span class="section-toggle">▼</span><h2 id="service">一、服务说明</h2></summary>
+<div class="policy-section-content">
+<p>1. 本App为<strong>单机本地运行</strong>工具应用，绝大多数文件处理、功能计算均在您的设备本地完成，不向服务器上传任何用户本地文件、图片、隐私数据。</p>
+<p>2. 本App包含基于 Google ML Kit 实现的本地识别、分析等功能（文字识别、条码扫描、语言翻译等），该功能<strong>仅在设备本地运行</strong>，不上传图片、文本至第三方服务器；仅首次使用时需联网下载对应语言模型文件。</p>
+<p>3. 本App内置<strong>自动连点、自动点击、自动滑动</strong>辅助工具，需用户主动授权无障碍服务、悬浮窗权限、前台服务权限后方可使用，所有自动操作仅在设备本地执行。</p>
+<p>4. 本App内置<strong>免流量局域网快传</strong>功能，依托本地WiFi局域网实现设备间点对点离线文件传输，数据仅在局域网内交互，不经过任何第三方中转服务器、不上传外网；传输链路采用加密保护，以保障局域网传输过程中的数据安全。</p>
+<p>5. 本App内置文件管理应用选择功能，可本地读取设备已安装应用列表，仅用于本地功能操作，不对外传输应用相关数据。</p>
+<p>6. 本App采用<strong>观看广告解锁功能</strong>的模式，用户通过观看广告获得对应功能的使用权限，广告由第三方广告SDK（友盟SDK，运营方：友盟同欣（北京）科技有限公司等）提供；您可通过App内「广告个性化推荐」开关控制广告SDK对OAID的采集与广告个性化推荐行为。</p>
+<p>7. 本App内置<strong>兑换码福利兑换</strong>功能，可输入官方发放的兑换码兑换猫币、抽奖次数等应用内福利；该功能需要联网与服务器交互完成校验，相关数据处理规则详见隐私政策。</p>
+<div class="code-tip">
+<strong>兑换码服务数据说明</strong>：兑换功能仅上传您主动输入的兑换码，在您同意本应用隐私政策前提下，读取系统设备标识符Android ID（Settings.Secure.ANDROID_ID），并在客户端完成不可逆加盐SHA256哈希脱敏后再上传，同时服务器接口自动获取客户端访问IP；将脱敏后的Android ID、客户端IP与当前兑换码三者绑定存入数据库用于实时风控防刷。本应用不会读取、上传IMEI、OAID、设备序列号等其他硬件标识；仅存储风控校验所需绑定关系，不生成长期留存的完整核销流水日志。
+</div>
+<p>8. 本App内置<strong>邀请码推广奖励</strong>功能，用户可生成个人邀请码分享给其他用户，新用户填写邀请码后，邀请人与被邀请人均可获得猫币等应用内虚拟奖励；该功能需要联网与服务器交互完成邀请关系绑定与奖励发放，相关数据处理规则详见隐私政策。</p>
+<div class="invite-tip">
+<strong>邀请码服务数据说明</strong>：邀请码绑定过程中，在您同意本应用隐私政策前提下，读取系统设备标识符Android ID（Settings.Secure.ANDROID_ID），客户端完成不可逆加盐SHA256哈希脱敏后上传。使用脱敏Android ID、邀请码建立邀请关系，用于奖励发放与反作弊风控。本应用不会读取、上传IMEI、OAID、设备序列号等其他硬件标识；邀请关系仅用于推广奖励业务，不会用于其他用途。
+</div>
+<p>9. 本App集成 <strong>Vosk 离线语音识别引擎</strong>，语音采集、语音解析、识别处理全程在设备本地完成，不会上传语音数据至任何服务器；仅在用户主动操作时，可联网下载Vosk官方提供的离线语音识别模型文件，模型下载遵循Vosk官方协议规范。</p>
+<p>10. 本App使用的第三方开源库、开源组件（包括但不限于 NanoHTTPD、Bouncy Castle、OpenCV、Apache POI、Glide 等）均遵循其对应的开源许可协议，完整清单详见<a href="https://hanpaopao-hue.github.io/toolcat/copyright_authorization.html" target="_blank" rel="noopener noreferrer">《开源软件许可声明》</a>。</p>
+</div>
+</details>
+
+<!-- ==================== 二、使用年龄与陪同规则 ==================== -->
+<details class="policy-section" open id="sec-age">
+<summary><span class="section-toggle">▼</span><h2 id="age">二、使用年龄与陪同规则</h2></summary>
+<div class="policy-section-content">
+<p>1. 因集成 Google ML Kit、Vosk 离线语音识别、自动点击辅助、局域网快传、兑换码福利、邀请码推广奖励功能，本App对使用年龄作出如下要求：</p>
+<p>（1）<strong>年满18周岁</strong>的用户，可独立使用本App全部功能；</p>
+<p>（2）<strong>未满18周岁</strong>的未成年人，<strong>必须在监护人陪同、指导下方可使用</strong>，监护人应对未成年人的使用行为全程负责；其中<strong>不满14周岁的儿童</strong>使用本App的，须事先获得其监护人同意。</p>
+<p>2. 本App为单机应用，<strong>不具备实名认证、年龄验证能力</strong>，用户需自觉遵守本条约定。</p>
+<p>3. 如未成年人未在监护人陪同下使用本App，由此产生的一切责任由监护人承担，与开发者无关。</p>
+<p>4. 监护人应注意管理未成年人使用本App时的位置权限、相机权限、麦克风权限等敏感权限的授权，避免不必要的个人信息收集；如监护人发现未成年人权益受到侵害，可发送邮件至 2185273591@qq.com 联系开发者处理。</p>
+</div>
+</details>
+
+<!-- ==================== 三、用户权利与义务 ==================== -->
+<details class="policy-section" open id="sec-rights">
+<summary><span class="section-toggle">▼</span><h2 id="rights">三、用户权利与义务</h2></summary>
+<div class="policy-section-content">
+<ul>
+    <li>1. 遵守法律法规及本协议约定，合法、合规、合理使用本App各项功能。</li>
+    <li>2. 不通过破解、篡改、作弊、外挂等方式绕过广告或功能限制。</li>
+    <li>3. 严禁利用本App自动连点、自动点击功能用于恶意刷量、违规操作、游戏作弊、侵权及各类违法违规场景。</li>
+    <li>4. 不利用局域网快传传输违法违规、侵权、不良信息文件，违规传输后果由用户自行承担。</li>
+    <li>5. 不利用本App从事侵权、违法、违规行为，违规使用产生的一切后果由用户自行承担。</li>
+    <li>6. 自行备份重要文件，因使用本App文件处理、文件传输功能造成的文件损失由用户自行承担。</li>
+    <li>7. 未成年人使用本App的，应确保已获得监护人同意并在其陪同下使用。</li>
+    <li>8. 可通过App内「我的」->「开关设置」->「广告个性化推荐」开关控制广告SDK对OAID的采集与广告个性化推荐行为，开关操作需重启应用后方可生效。<strong>关闭开关后广告仍会展示（非个性化推荐），您仍可通过观看广告解锁对应功能。</strong></li>
+    <li>9. Vosk语音识别模型、无障碍相关服务、局域网传输服务均遵循对应官方协议，请自觉遵守，违规使用后果自行承担。</li>
+    <li>10. 无障碍服务、悬浮窗、前台服务、WiFi相关权限仅用于对应功能实现，用户可随时在系统设置关闭权限或停止服务。</li>
+    <li>11. 应用列表查询权限仅服务本地文件管理选择功能，禁止用于窃取、批量收集设备应用信息等违规用途。</li>
+    <li>12. 兑换码仅可本人免费使用，禁止批量采集、倒卖、共享、脚本批量刷取兑换码福利；服务器将通过IP临时风控拦截恶意刷码行为，违规者开发者有权限制其兑换功能使用权限。</li>
+    <li>13. 兑换码存在有效期、使用次数限制，过期或次数用尽后自动失效，不予补发，用户需自行留意兑换码使用时效。</li>
+    <li>14. 邀请码仅限正常个人推广分享，禁止脚本批量注册、刷邀请、倒卖邀请码、有偿售卖邀请链接、恶意薅取推广奖励；服务器会进行反作弊风控，对刷邀请、虚假邀请行为，开发者有权撤销全部违规所得虚拟奖励、封禁邀请码功能。</li>
+    <li>15. 用户不得通过虚假宣传、误导话术诱导他人填写邀请码；因用户个人推广话术引发的纠纷，由该用户自行承担全部责任。</li>
+    <li>16. 邀请推广奖励为应用内虚拟猫币，不可兑换现金，不支持折现、转账、提现；奖励规则、奖励额度开发者可根据运营情况进行调整。</li>
+</ul>
+</div>
+</details>
+
+<!-- ==================== 四、广告规则 ==================== -->
+<details class="policy-section" open id="sec-ad">
+<summary><span class="section-toggle">▼</span><h2 id="ad">四、广告规则</h2></summary>
+<div class="policy-section-content">
+<div class="ad-switch-note">
+<strong>广告个性化推荐开关说明</strong>：您可在本App「我的」->「开关设置」->「广告个性化推荐」中操作该开关，开关功能如下：<br>
+▶ <strong>关闭开关并重启应用</strong>：本App将<strong>关闭广告SDK对OAID的采集</strong>，不会再采集OAID信息，广告将不再基于您的偏好进行个性化推荐（广告仍会展示，您仍可通过观看广告解锁功能）；<br>
+▶ <strong>开启开关并重启应用</strong>：将恢复广告SDK对OAID的采集，广告将基于您的设备信息进行个性化推荐。
+</div>
+<p>1. 本App通过广告收入维持开发与运营，用户可通过观看广告解锁对应功能；<strong>广告个性化推荐开关的关闭不影响广告展示与广告解锁功能</strong>，仅影响广告是否基于您的偏好进行个性化推荐。</p>
+<p>2. 广告内容、加载、展示均由第三方广告SDK（友盟SDK，运营方：友盟同欣（北京）科技有限公司等）提供与控制，开发者不对广告内容的真实性、合法性负责。</p>
+<p>3. 因网络、平台、设备等原因导致广告无法加载或播放失败，属于正常现象，开发者不承担补偿或赔偿责任。</p>
+<p>4. 所有任务广告观看一次获得一次奖励，奖励规则在广告SDK正常加载时生效。</p>
+<p>5. 广告SDK在用户同意隐私政策后开始初始化并采集相关信息（详见隐私政策第三方SDK清单），如您未同意隐私政策，广告SDK不会初始化，也不会采集任何信息。</p>
+</div>
+</details>
+
+<!-- ==================== 五、辅助功能权限使用说明 ==================== -->
+<details class="policy-section" open id="sec-permission">
+<summary><span class="section-toggle">▼</span><h2 id="permission">五、辅助功能权限使用说明</h2></summary>
+<div class="policy-section-content">
+<p>1. 为实现自动连点、自动点击、自动滑动功能，本App需要用户主动授权：<strong>无障碍服务权限、悬浮窗(SYSTEM_ALERT_WINDOW)权限、前台服务(FOREGROUND_SERVICE)权限</strong>。</p>
+<p>2. 无障碍服务仅用于模拟屏幕点击、滑动等自动化操作，<strong>不会读取屏幕内容、不会抓取文字、不会获取用户隐私、账号密码等敏感信息</strong>，不录制屏幕、不监听输入内容，所有操作仅由用户手动配置触发，无后台自动触发行为。</p>
+<p>3. 悬浮窗权限仅用于展示连点控制悬浮球、操作预览界面，方便启停连点服务；前台服务仅用于维持后台连点服务稳定运行，无任何信息收集行为。</p>
+<p>4. WiFi相关权限、周边设备权限、部分系统版本下位置权限，仅用于局域网快传设备搜索、配对与离线文件传输，仅本地局域网使用；拒绝授权仅影响局域网设备搜索功能，不影响App其余功能正常使用。</p>
+<p>5. 应用列表查询权限仅用于本地文件管理内应用选择操作，不会上传应用相关数据。</p>
+<p>6. 麦克风权限仅在用户主动操作时调用，用于音频录制、语音识别、语音翻译等，录制的音频纯本地存储，不会上传到任何第三方服务器；关闭麦克风权限后立即停止采集。</p>
+<p>7. 上述权限均为用户手动开启，用户可随时关闭服务、撤销权限，关闭后对应功能立即失效，但不影响其他功能正常使用。</p>
+<p>8. 请文明合规使用自动点击、局域网快传、语音识别辅助功能，禁止用于违规、非法用途，违规使用一切责任由用户自行承担。</p>
+</div>
+</details>
+
+<!-- ==================== 六、隐私政策说明 ==================== -->
+<details class="policy-section" open id="sec-privacy">
+<summary><span class="section-toggle">▼</span><h2 id="privacy">六、隐私政策说明</h2></summary>
+<div class="policy-section-content">
+<p>1. 本App绝大多数本地功能<strong>不收集、不上传、不存储</strong>任何个人身份信息、文件内容、图片内容或使用记录。</p>
+<p>2. 兑换码功能仅联网提交用户输入的兑换码，在您同意本应用隐私政策前提下，读取系统设备标识符Android ID（Settings.Secure.ANDROID_ID），并在客户端完成不可逆加盐SHA256哈希脱敏后再上传，同时服务器接口自动获取客户端访问IP；将脱敏后的Android ID、客户端IP与当前兑换码三者绑定存入数据库用于实时风控防刷。本应用不会读取、上传IMEI、OAID、设备序列号等其他硬件标识；仅存储风控校验所需绑定关系，不生成长期留存的完整核销流水日志。</p>
+<p>3. 第三方广告SDK（友盟SDK）与 Google ML Kit 可能会根据其自身规则获取设备标识等信息，用于广告展示与功能实现；关闭「广告个性化推荐」开关后，广告SDK将不再采集OAID信息，具体以第三方政策为准。</p>
+<p>4. 本App不会主动收集、存储或传输用户隐私数据；自动连点、局域网快传相关服务全程本地运行，无数据上传外网。</p>
+<p>5. Vosk 离线语音识别引擎、JNA 工具库为纯本地运行组件，无任何信息收集、上传行为。</p>
+<p>6. 本地应用列表读取仅用于自身功能操作，不会对外共享、上传设备应用信息。</p>
+<p>7. 本App集成的第三方SDK完整清单（包括SDK名称、运营方、共享信息类型、使用目的等）详见隐私政策第五章「第三方SDK信息共享清单」。</p>
+<p>8. 兑换码、邀请码相关的服务器端数据均按隐私政策规定的留存期限与清理规则<strong>自动定期删除</strong>（兑换码绑定关系在过期/次数用尽后删除，防刷列表每6小时清理一次；邀请码绑定关系在最后使用后3个月自动清除），不存在永久留存。</p>
+<p>9. 您有权查询、更正、删除您的个人信息并撤回授权；如需申请删除服务器端兑换码/邀请码相关脱敏数据，可发送邮件至 2185273591@qq.com（邮件主题请注明「数据删除请求」），开发者将在<strong>15个工作日</strong>内回复并处理。</p>
+<p>完整个人信息处理规则详见<a href="https://hanpaopao-hue.github.io/toolcat/privacy_policy_v130.html" target="_blank" rel="noopener noreferrer">《隐私政策 v1.3.0》</a></p>
+</div>
+</details>
+
+<!-- ==================== 七、知识产权 ==================== -->
+<details class="policy-section" open id="sec-ip">
+<summary><span class="section-toggle">▼</span><h2 id="ip">七、知识产权</h2></summary>
+<div class="policy-section-content">
+<p>1. 本App的代码、界面、设计、逻辑等知识产权归个人开发者所有。软件所使用的第三方开源库及资源（包括但不限于 AndroidX、Kotlin、Google ML Kit、Vosk、JNA、NanoHTTPD、Bouncy Castle、OpenCV、Apache POI、Glide、Gson 等运行时依赖，构建/测试阶段依赖，以及词典、铃声、字体等应用资源）的版权归属其各自所有者，相关使用均遵循对应的开源许可协议与商用授权，完整清单详见<a href="https://hanpaopao-hue.github.io/toolcat/copyright_authorization.html" target="_blank" rel="noopener noreferrer">《开源软件许可声明》</a>。</p>
+<p>2. 本App使用的第三方开源库、Google ML Kit、Vosk 离线语音识别引擎、JNA 工具库、友盟广告SDK、无障碍相关能力、局域网传输组件、兑换码服务接口均遵守其对应的开源协议与服务条款。</p>
+<p>3. 用户仅享有本APP的使用权，不得对代码进行以下操作：<br>
+(1) 反编译、逆向工程、拆解APP以提取核心代码；<br>
+(2) 将代码片段/完整代码上传至GitHub、Gitee等开源平台；<br>
+(3) 向第三方出售、转让、分享代码；<br>
+(4) 基于本代码开发同类产品或商用功能。</p>
+<p>4. App内官方发放的兑换码、邀请码、福利机制相关权益知识产权归开发者所有，禁止私自生成、伪造、倒卖兑换码与邀请码。</p>
+</div>
+</details>
+
+<!-- ==================== 八、免责声明 ==================== -->
+<details class="policy-section" open id="sec-disclaimer">
+<summary><span class="section-toggle">▼</span><h2 id="disclaimer">八、免责声明</h2></summary>
+<div class="policy-section-content">
+<p><strong>本App按"现状"提供，开发者不承诺服务不间断、无错误。</strong></p>
+<ul>
+    <li>1. 因设备故障、系统兼容、文件损坏、误操作、局域网传输异常等导致的数据损失，开发者不承担责任。</li>
+    <li>2. 因用户违反协议、违规使用自动点击、文件传输功能、第三方广告、网络问题等产生的任何损失，开发者不承担责任。</li>
+    <li>3. 用户违规使用连点功能进行游戏作弊、恶意操作、违规刷量等行为，一切风险与责任由用户自行承担。</li>
+    <li>4. 用户违规传输违规违法文件、滥用应用查询权限、批量刷取兑换码福利造成的相关纠纷，责任由用户自行承担。</li>
+    <li>5. 未成年人未在监护人陪同下使用本App所引发的全部责任，由监护人承担。</li>
+    <li>6. 个人开发者保留随时停止维护、更新或下架应用的权利，无需承担责任。</li>
+    <li>7. 兑换码存在有效期与使用次数限制，因用户逾期未兑换、自行泄露兑换码造成福利损失，开发者不予补偿。</li>
+    <li>8. 邀请推广奖励为应用内虚拟奖励，不支持现金折现；因网络异常、反作弊风控判定导致奖励未发放或奖励撤销，开发者无现金补偿义务。</li>
+    <li>9. 第三方广告SDK展示的广告内容、第三方开源软件的功能性与安全性由其各自运营方/版权持有人负责，开发者不对上述内容承担担保责任。</li>
+</ul>
+</div>
+</details>
+
+<!-- ==================== 九、协议修改 ==================== -->
+<details class="policy-section" open id="sec-update">
+<summary><span class="section-toggle">▼</span><h2 id="update">九、协议修改</h2></summary>
+<div class="policy-section-content">
+<p>开发者可在必要时更新本协议，更新后的协议将在App内或本页面公布，并注明更新日期和生效日期。涉及服务内容、用户义务等重大变更的，将通过更显著的方式（如弹窗提示）向您告知。您继续使用本App即视为同意修改后的协议；如您不同意，可停止使用本App。</p>
+<p>本协议历史版本可通过本页面顶部版本链接查看。</p>
+<p>本次v1.3.0版本主要更新内容：同步更新广告SDK相关描述（由"口袋工厂"更改为"友盟SDK"）、更改广告个性化推荐开关行为说明（关闭开关仅停止OAID采集与个性化推荐，不影响广告展示与解锁功能）、新增Vosk离线语音识别功能服务说明、同步引用隐私政策v1.3.0、补充开源软件许可声明与数据删除请求渠道相关引用。</p>
+</div>
+</details>
+
+<!-- ==================== 十、联系与反馈 ==================== -->
+<details class="policy-section" open id="sec-contact">
+<summary><span class="section-toggle">▼</span><h2 id="contact">十、联系与反馈</h2></summary>
+<div class="policy-section-content">
+<p>开发者姓名：李华飞（个人信息保护负责人）</p>
+<p>开发者邮箱：2185273591@qq.com（数据删除请求请注明主题「数据删除请求」）</p>
+<p>回复时限：我们将在15个工作日内回复您的诉求。</p>
+<p>本App为个人独立开发，非公司运营。如您认为本应用在个人信息处理方面侵害了您的合法权益，且与开发者沟通后未能解决，还可通过网信部门（12377.cn）、工信部、12315平台等渠道投诉举报。</p>
+</div>
+</details>
+
+<div class="footer">
+    本协议生效日期：2026年8月13日<br>
+    工具猫 | 李华飞 版权所有
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="返回顶部" title="返回顶部">↑</button>
+
 </body>
+<script>
+// === 搜索功能（JS 可选，WebView 未开启 JS 时优雅降级） ===
+(function() {
+    var searchInput = document.getElementById('searchInput');
+    var sections = document.querySelectorAll('.policy-section');
+    var noResult = document.getElementById('noResult');
+    if (!searchInput) return;
+
+    searchInput.addEventListener('input', function() {
+        var query = this.value.toLowerCase().trim();
+        var visibleCount = 0;
+
+        sections.forEach(function(section) {
+            if (query === '') {
+                section.style.display = '';
+                section.setAttribute('open', '');
+                visibleCount++;
+            } else {
+                var text = section.textContent.toLowerCase();
+                if (text.indexOf(query) !== -1) {
+                    section.style.display = '';
+                    section.setAttribute('open', '');
+                    visibleCount++;
+                } else {
+                    section.style.display = 'none';
+                }
+            }
+        });
+
+        noResult.style.display = visibleCount === 0 ? 'block' : 'none';
+    });
+})();
+
+// === 返回顶部按钮 ===
+(function() {
+    var btn = document.getElementById('backToTop');
+    if (!btn) return;
+
+    window.addEventListener('scroll', function() {
+        btn.style.display = window.pageYOffset > 300 ? 'block' : 'none';
+    });
+
+    btn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+})();
+
+// === TOC 链接点击时自动展开目标分区 ===
+(function() {
+    document.querySelectorAll('.toc a[href^="#"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            var targetId = this.getAttribute('href').substring(1);
+            var targetHeading = document.getElementById(targetId);
+            if (targetHeading) {
+                var targetSection = targetHeading.closest('details');
+                if (targetSection) {
+                    targetSection.setAttribute('open', '');
+                }
+            }
+        });
+    });
+})();
+</script>
 </html>
