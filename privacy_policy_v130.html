@@ -189,6 +189,22 @@
     .sdk-table tr:nth-child(even) td {
         background-color: var(--table-row-alt);
     }
+
+    /* === 表格横向滚动容器 === */
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .table-wrapper .sdk-table {
+        margin: 0;
+        min-width: 600px;
+        border-radius: 0;
+        overflow: visible;
+        box-shadow: none;
+    }
     .footer {
         margin-top: 50px;
         text-align: center;
@@ -433,10 +449,10 @@
     /* 响应式表格 */
     @media (max-width: 600px) {
         .sdk-table {
-            font-size: 12px;
+            font-size: 13px;
         }
         .sdk-table th, .sdk-table td {
-            padding: 6px;
+            padding: 8px 6px;
         }
     }
 </style>
@@ -521,6 +537,7 @@
 <div class="policy-section-content">
 <h3>2.1 个人信息收集清单</h3>
 <p>为保障本应用基础功能正常运行、进行安全校验、防止功能滥用并优化服务体验，本应用收集的个人信息如下表所示：</p>
+<div class="table-wrapper">
 <table class="sdk-table">
 <tr>
     <th>业务功能</th>
@@ -593,6 +610,7 @@
     <td>否</td>
 </tr>
 </table>
+</div>
 <p><strong>说明</strong>：除上述列明信息外，本应用不会收集您的其他个人信息。本应用不会收集您的身份证号、银行账户、密码、生物识别信息等敏感个人信息，但位置信息（用于广告反作弊及局域网快传）属于敏感个人信息范畴，我们将在您授权后按最小必要原则使用，详见下文。</p>
 
 <h3>2.2 敏感个人信息处理说明</h3>
@@ -773,6 +791,7 @@
 <strong>广告SDK初始化规则</strong>：当用户同意隐私政策后，广告SDK将开始初始化，这时将进行相关信息的采集，采集信息见下表。如您未同意隐私政策，SDK不会初始化，也不会采集任何信息。
 </div>
 <p>本应用仅集成以下第三方SDK，我们向第三方SDK共享的个人信息及各SDK的详细情况如下表所示。相关SDK的信息收集行为受其运营方合规规则约束：</p>
+<div class="table-wrapper">
 <table class="sdk-table">
 <tr>
     <th>SDK名称</th>
@@ -838,6 +857,7 @@
     <td><a href="https://github.com/java-native-access/jna" target="_blank" rel="noopener noreferrer">查看链接</a></td>
 </tr>
 </table>
+</div>
 <p><strong>SDK数据共享原则</strong>：我们仅向上述SDK共享为实现对应功能所必需的信息，不额外提供您的其他个人信息。各SDK运营方对其收集的信息独立承担责任，我们不会将您的个人信息出售或提供给上述SDK以外的任何第三方。</p>
 <p><strong>特别说明</strong>：上表所列MAC地址采集行为受Android系统版本限制，Android 6及以上系统已对MAC地址进行随机化处理，实际可获取的MAC地址为系统随机生成的临时地址，不可用于唯一标识设备。Google ML Kit所使用的Firebase组件（Firebase远程配置、Firebase安装）仅用于ML Kit功能的调试与优化，其数据处理遵循Google官方隐私政策，详见4.2.3节说明。</p>
 </div>
@@ -874,6 +894,7 @@
 <!-- 新增：数据留存期限表（Google Play 数据安全表单要求） -->
 <h3>6.3 数据留存期限一览表</h3>
 <p>为符合 Google Play 数据安全披露要求，以下表格汇总各类数据的留存期限与删除方式：</p>
+<div class="table-wrapper">
 <table class="sdk-table">
 <tr>
     <th>数据类型</th>
@@ -936,6 +957,7 @@
     <td>传输完成后自动消失</td>
 </tr>
 </table>
+</div>
 </div>
 </details>
 
@@ -1125,6 +1147,7 @@
 </ul>
 
 <h3>13.3 应用基本信息</h3>
+<div class="table-wrapper">
 <table class="sdk-table">
 <tr>
     <th>项目</th>
@@ -1163,6 +1186,7 @@
     <td>已填写并提交 Data Safety 表单</td>
 </tr>
 </table>
+</div>
 </div>
 </details>
 
